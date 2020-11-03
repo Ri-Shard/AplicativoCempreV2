@@ -1,0 +1,14 @@
+C:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\obj\Debug\netstandard2.0\Logica.csprojAssemblyReference.cache
+C:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\obj\Debug\netstandard2.0\Logica.AssemblyInfoInputs.cache
+C:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\obj\Debug\netstandard2.0\Logica.AssemblyInfo.cs
+C:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\obj\Debug\netstandard2.0\Logica.csproj.CoreCompileInputs.cache
+c:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\bin\Debug\netstandard2.0\Logica.deps.json
+c:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\bin\Debug\netstandard2.0\Logica.dll
+c:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\bin\Debug\netstandard2.0\Logica.pdb
+c:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\bin\Debug\netstandard2.0\Datos.dll
+c:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\bin\Debug\netstandard2.0\Entity.dll
+c:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\bin\Debug\netstandard2.0\Datos.pdb
+c:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\bin\Debug\netstandard2.0\Entity.pdb
+c:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\obj\Debug\netstandard2.0\Logica.csproj.CopyComplete
+c:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\obj\Debug\netstandard2.0\Logica.dll
+c:\Users\rikar\Desktop\Angular\AplicativoCempre\Logica\obj\Debug\netstandard2.0\Logica.pdb
