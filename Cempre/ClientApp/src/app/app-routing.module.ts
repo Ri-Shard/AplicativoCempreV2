@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {EstudianteConsultaComponent} from './Solicitud/estudiante-consulta/estudiante-consulta.component';
 import {EstudianteRegistroComponent} from './Solicitud/estudiante-registro/estudiante-registro.component';
 import { RegistrarComponent } from './Gestion/registrar/registrar.component';
+import { LoginComponent } from './Login/login/login.component';
+import { RegisterComponent } from './Login/register/register.component';
 
 const routes: Routes = [
   {
@@ -17,7 +19,15 @@ const routes: Routes = [
   {
       path: 'gestionRegistro',
       component:RegistrarComponent
-    }
+    },
+    {
+        path: 'loginRegistro',
+        component:RegisterComponent
+      },
+    {
+        path: 'login',
+        component:LoginComponent
+      },
 ];
 
 

@@ -16,6 +16,8 @@ import { EstudianteService } from './services/estudiante.service';
 import { RegistrarComponent } from './Gestion/registrar/registrar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FloatWidgetComponent } from './float-widget/float-widget.component';
+import { LoginComponent } from './Login/login/login.component';
+import { RegisterComponent } from './Login/register/register.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { FloatWidgetComponent } from './float-widget/float-widget.component';
     EstudianteRegistroComponent,
     RegistrarComponent,
     FooterComponent,
-    FloatWidgetComponent
+    FloatWidgetComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     ReactiveFormsModule,
