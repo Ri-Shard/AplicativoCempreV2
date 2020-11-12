@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import {EstudianteConsultaComponent} from './Solicitud/estudiante-consulta/estudiante-consulta.component';
 import {EstudianteRegistroComponent} from './Solicitud/estudiante-registro/estudiante-registro.component';
+import { RegistrarComponent } from './Gestion/registrar/registrar.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,11 @@ const routes: Routes = [
   {
     path: 'estudianteRegistro',
     component:EstudianteRegistroComponent
-  }
+  },
+  {
+      path: 'gestionRegistro',
+      component:RegistrarComponent
+    }
 ];
 
 

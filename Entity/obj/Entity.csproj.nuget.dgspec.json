@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj": {}
+    "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj": {}
   },
   "projects": {
-    "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj": {
+    "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj",
+        "projectPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\rikar\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\obj\\",
+        "outputPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rikar\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "65/lQIGfHl38JOWt+3pZi5xOm3qyUeoqbt8wtmIdZQGkdojxMKa5tcHWLQXaGk880w4e84hi823FId040URjKQ==",
+  "dgSpecHash": "c9ol8GRRLJM60Mg2RIeyE0w6OgSYY/AR+QlUfK4/Tvy2RuAhxdtdNCvdOT7VWXHdyrZHkwNKjUqQedF0i4ascA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj",
+  "projectFilePath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rikar\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\rikar\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

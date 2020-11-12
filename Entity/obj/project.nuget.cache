@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qejSBqa39oAluvOiW2mkBfzZrH8zIAHgyzh7cWOGkY4O57/X3Uj0OfDTay1JC6xeoKnJFPSF2f/IkZ5yJKBYIw==",
+  "dgSpecHash": "E8SKUCRWo4P00acTB1vTf7/76V+Q6H+Zr4trMs+rgLzJrpX/jYQ7YJ4oTuF0b2qww9IZOaG8rivcqdi2fpDW3g==",
   "success": true,
-  "projectFilePath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj",
+  "projectFilePath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rikar\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\rikar\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

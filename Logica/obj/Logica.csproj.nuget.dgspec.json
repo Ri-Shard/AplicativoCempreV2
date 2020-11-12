@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Logica\\Logica.csproj": {}
+    "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Logica\\Logica.csproj": {}
   },
   "projects": {
-    "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj": {
+    "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj",
+        "projectUniqueName": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj",
+        "projectPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj",
         "packagesPath": "C:\\Users\\rikar\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\obj\\",
+        "outputPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rikar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -25,8 +25,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj": {
-                "projectPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj"
+              "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj": {
+    "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj",
+        "projectPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\rikar\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\obj\\",
+        "outputPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rikar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -122,14 +122,14 @@
         }
       }
     },
-    "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Logica\\Logica.csproj": {
+    "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Logica\\Logica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Logica\\Logica.csproj",
+        "projectUniqueName": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Logica\\Logica.csproj",
         "projectName": "Logica",
-        "projectPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Logica\\Logica.csproj",
+        "projectPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Logica\\Logica.csproj",
         "packagesPath": "C:\\Users\\rikar\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Logica\\obj\\",
+        "outputPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Logica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rikar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -143,11 +143,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj": {
-                "projectPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj"
+              "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj": {
+                "projectPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj"
               },
-              "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj": {
-                "projectPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj"
+              "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj"
               }
             }
           }

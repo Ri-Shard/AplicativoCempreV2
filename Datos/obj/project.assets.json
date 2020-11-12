@@ -1083,11 +1083,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj",
+      "projectUniqueName": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj",
       "projectName": "Datos",
-      "projectPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj",
+      "projectPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj",
       "packagesPath": "C:\\Users\\rikar\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\obj\\",
+      "outputPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rikar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1101,8 +1101,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj": {
-              "projectPath": "c:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj"
+            "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj": {
+              "projectPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Entity\\Entity.csproj"
             }
           }
         }

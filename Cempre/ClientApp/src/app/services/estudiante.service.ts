@@ -22,7 +22,7 @@ import { HandleHttpErrorService } from '../@base/handle-http-error.service';
     get(): Observable<Estudiante[]> {
       return this.http.get<Estudiante[]>(this.baseUrl + 'api/Estudiante')
           .pipe(
-              tap(_ => this.handleErrorService.log('datos enviados')),
+              tap(_ => this.handleErrorService.log('datos recibidos')),
               catchError(this.handleErrorService.handleError<Estudiante[]>('Consulta Estudiante', null))
           );
     }
