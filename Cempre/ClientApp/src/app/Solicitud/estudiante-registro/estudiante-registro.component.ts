@@ -71,6 +71,9 @@ export class EstudianteRegistroComponent implements OnInit {
       get semestreinvalido() {
         return this.formGroup.get('semestre').invalid && this.formGroup.get('semestre').touched;
       }
+       get correoinvalido() {
+        return this.formGroup.get('correo').invalid && this.formGroup.get('correo').touched;
+      }
 
       
 }

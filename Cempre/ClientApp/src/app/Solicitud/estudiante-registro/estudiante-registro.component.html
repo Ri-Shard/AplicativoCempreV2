@@ -2,7 +2,7 @@
 <div  class="container fadeIn animated" style="max-width: 20cm ; position: relative ">
     <div class="card">
         <div class="card-header text-md-center" style="background-color: rgb(34, 34, 34);">
-            <h2>Registrar Estudiante </h2>
+            <h2 style="color: white;">Registrar Estudiante </h2>
         </div>
         <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
 
@@ -63,6 +63,9 @@
                     </div>
                     <div class="col-sm-4 " style="max-width:100% ">
                         <button class="btn btn-danger "  [routerLink]="[ '/gestionRegistro'] ">Cancelar</button>
+                    </div>
+                    <div class="col-sm-4 " style="max-width:100% ">
+                        <button class="btn btn-outline-primary " >Adjuntar Hoja de Vida</button>
                     </div>
             </div>
     </div>
