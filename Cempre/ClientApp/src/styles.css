@@ -8,11 +8,16 @@ a {
 code {
   color: #e01a76;
 }
-
+body{
+   background-color: #D4E2E2;
+}
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+.card{
+  background-color: #D4E2E2; 
 }
 
 footer {

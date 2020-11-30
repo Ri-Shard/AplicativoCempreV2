@@ -47,12 +47,22 @@ namespace Cempre.Controllers
         {
             var estudiante = new Estudiante
             {
-                Identificacion = estudianteInput.Identificacion,
-                Nombre = estudianteInput.Nombre,
-                Edad = estudianteInput.Edad,
-                Sexo = estudianteInput.Sexo,
-                Semestre = estudianteInput.Semestre,
-                Correo = estudianteInput.Correo,
+            Nombres = estudianteInput.Nombres,
+            Identificacion = estudianteInput.Identificacion,
+            Apellido = estudianteInput.Apellido,
+            FechaNacimiento = estudianteInput.FechaNacimiento,
+            CiudadNacimiento = estudianteInput.CiudadNacimiento,
+            EstadoCivil = estudianteInput.EstadoCivil,
+            Telefono = estudianteInput.Telefono,
+            Eps = estudianteInput.Eps,
+            InvOproyec = estudianteInput.InvOproyec,
+            Conocimientoyprac = estudianteInput.Conocimientoyprac,
+            Seminarios = estudianteInput.Seminarios,
+            Distinciones = estudianteInput.Distinciones,
+            Edad = estudianteInput.Edad,
+            Sexo = estudianteInput.Sexo,
+            Semestre = estudianteInput.Semestre,
+            Correo = estudianteInput.Correo,
             };
             return estudiante; 
         }

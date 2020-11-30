@@ -35,13 +35,23 @@ export class EstudianteRegistroComponent implements OnInit {
     this.formGroup = this.formBuilder.group({
 
       identificacion: ['', Validators.required],
-      nombre: ['', Validators.required],
+      nombres: ['', Validators.required],
+      apellido: ['', Validators.required],
+      fechaNacimiento: ['', Validators.required],
+      ciudadNacimiento: ['', Validators.required],
+      estadoCivil: ['', Validators.required],
+      telefono: ['', Validators.required],
+      eps: ['', Validators.required],
+       invOproyec: ['', Validators.required],
+      conocimientoyprac: ['', Validators.required],
+      seminarios: ['', Validators.required],
+      distinciones: ['', Validators.required], 
       sexo: ['', Validators.required],
       edad: ['', Validators.required],
-      semestre: [10, Validators.required],
-      correo: ['', Validators.required],
+       semestre: ['', Validators.required],
+       correo: ['', Validators.required],
 
-    });
+    }); 
 
     }
     get control() {
@@ -53,14 +63,45 @@ export class EstudianteRegistroComponent implements OnInit {
         control.markAllAsTouched();
       });
       }
+      console.log(this.formGroup);
       this.add();
       }
 
       get identificacioninvalido() {
         return this.formGroup.get('identificacion').invalid && this.formGroup.get('identificacion').touched;
-      }
+      } 
       get nombreinvalido() {
-        return this.formGroup.get('nombre').invalid && this.formGroup.get('nombre').touched;
+        return this.formGroup.get('nombres').invalid && this.formGroup.get('nombres').touched;
+      }
+      get apellidoinvalido() {
+        return this.formGroup.get('apellido').invalid && this.formGroup.get('apellido').touched;
+      }
+      get fechainvalido() {
+        return this.formGroup.get('fechaNacimiento').invalid && this.formGroup.get('fechaNacimiento').touched;
+      }
+      get ciudadNinvalido() {
+        return this.formGroup.get('ciudadNacimiento').invalid && this.formGroup.get('ciudadNacimiento').touched;
+      }
+      get estadoCinvalido() {
+        return this.formGroup.get('estadoCivil').invalid && this.formGroup.get('estadoCivil').touched;
+      }
+      get telefinvalido() {
+        return this.formGroup.get('telefono').invalid && this.formGroup.get('telefono').touched;
+      }
+      get epsinvalido() {
+        return this.formGroup.get('eps').invalid && this.formGroup.get('eps').touched;
+      }
+      get invOproyecinvalido() {
+        return this.formGroup.get('invOproyec').invalid && this.formGroup.get('invOproyec').touched;
+      }
+      get conocimientoypracinvalido() {
+        return this.formGroup.get('conocimientoyprac').invalid && this.formGroup.get('conocimientoyprac').touched;
+      }
+      get seminariosinvalido() {
+        return this.formGroup.get('seminarios').invalid && this.formGroup.get('seminarios').touched;
+      }
+      get distincionesinvalido() {
+        return this.formGroup.get('distinciones').invalid && this.formGroup.get('distinciones').touched;
       }
       get edadinvalido() {
         return this.formGroup.get('edad').invalid && this.formGroup.get('edad').touched;
@@ -74,7 +115,6 @@ export class EstudianteRegistroComponent implements OnInit {
        get correoinvalido() {
         return this.formGroup.get('correo').invalid && this.formGroup.get('correo').touched;
       }
-
-      
+  
 }
 

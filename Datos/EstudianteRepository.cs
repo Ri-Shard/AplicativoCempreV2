@@ -19,10 +19,20 @@ namespace Datos
         {
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"Insert Into Estudiante (Identificacion,Nombre,Edad,Sexo,Semestre,Correo) 
-                                        values (@Identificacion,@Nombre,@Edad,@Sexo,@Semestre,@Correo)";
+                command.CommandText = @"Insert Into Estudiante (Identificacion,Nombres,Apellido,FechaNacimiento,CiudadNacimiento,EstadoCivil,Telefono,Eps,InvOproyec,Conocimientoyprac,Seminarios,Distinciones,Edad,Sexo,Semestre,Correo) 
+                                        values (@Identificacion,@Nombres,@Apellido,@FechaNacimiento,@CiudadNacimiento,@EstadoCivil,@Telefono,@Eps,@InvOproyec,@Conocimientoyprac,@Seminarios,@Distinciones,@Edad,@Sexo,@Semestre,@Correo)";
                 command.Parameters.AddWithValue("@Identificacion", estudiante.Identificacion);
-                command.Parameters.AddWithValue("@Nombre", estudiante.Nombre);
+                command.Parameters.AddWithValue("@Nombres", estudiante.Nombres);
+                command.Parameters.AddWithValue("@Apellido", estudiante.Apellido);
+                command.Parameters.AddWithValue("@FechaNacimiento", estudiante.FechaNacimiento);
+                command.Parameters.AddWithValue("@CiudadNacimiento", estudiante.CiudadNacimiento);
+                command.Parameters.AddWithValue("@EstadoCivil", estudiante.EstadoCivil);
+                command.Parameters.AddWithValue("@Telefono", estudiante.Telefono);
+                command.Parameters.AddWithValue("@Eps", estudiante.Eps);
+                command.Parameters.AddWithValue("@InvOproyec", estudiante.InvOproyec);
+                command.Parameters.AddWithValue("@Conocimientoyprac", estudiante.Conocimientoyprac);
+                command.Parameters.AddWithValue("@Seminarios", estudiante.Seminarios);
+                command.Parameters.AddWithValue("@Distinciones", estudiante.Distinciones);
                 command.Parameters.AddWithValue("@Sexo", estudiante.Sexo);
                 command.Parameters.AddWithValue("@Edad", estudiante.Edad);
                 command.Parameters.AddWithValue("@Semestre", estudiante.Semestre);
@@ -36,7 +46,7 @@ namespace Datos
             List<Estudiante> estudiantes = new List<Estudiante>();
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "Select * from Estudiante ";
+                command.CommandText = "Select * from Estudiante";
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
                 {
@@ -66,7 +76,17 @@ namespace Datos
             if(!dataReader.HasRows) return null;
             Estudiante estudiante = new Estudiante();
             estudiante.Identificacion = (string)dataReader["Identificacion"];
-            estudiante.Nombre = (string)dataReader["Nombre"];
+            estudiante.Nombres = (string)dataReader["Nombres"];
+            estudiante.Apellido = (string)dataReader["Apellido"];
+            estudiante.FechaNacimiento = (string)dataReader["FechaNacimiento"];
+            estudiante.CiudadNacimiento = (string)dataReader["CiudadNacimiento"];
+            estudiante.EstadoCivil = (string)dataReader["EstadoCivil"];
+            estudiante.Telefono = (string)dataReader["Telefono"];
+            estudiante.Eps = (string)dataReader["Eps"];
+            estudiante.InvOproyec = (string)dataReader["InvOproyec"];
+            estudiante.Conocimientoyprac = (string)dataReader["Conocimientoyprac"];
+            estudiante.Seminarios = (string)dataReader["Seminarios"];
+            estudiante.Distinciones = (string)dataReader["Distinciones"];
             estudiante.Sexo = (string)dataReader["Sexo"];
             estudiante.Edad = (int)dataReader["Edad"];
             estudiante.Semestre = (int)dataReader["Semestre"];

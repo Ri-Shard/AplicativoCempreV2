@@ -7,15 +7,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { EstudianteConsultaComponent } from './Solicitud/estudiante-consulta/estudiante-consulta.component';
 import { EstudianteRegistroComponent } from './Solicitud/estudiante-registro/estudiante-registro.component';
 import { AppRoutingModule } from './app-routing.module';
 import { EstudianteService } from './services/estudiante.service';
 import { RegistrarComponent } from './Gestion/registrar/registrar.component';
 import { FooterComponent } from './footer/footer.component';
-import { FloatWidgetComponent } from './float-widget/float-widget.component';
 import { LoginComponent } from './Login/login/login.component';
 import { RegisterComponent } from './Login/register/register.component';
 
@@ -24,13 +21,10 @@ import { RegisterComponent } from './Login/register/register.component';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
     EstudianteConsultaComponent,
     EstudianteRegistroComponent,
     RegistrarComponent,
     FooterComponent,
-    FloatWidgetComponent,
     LoginComponent,
     RegisterComponent
   ],
@@ -42,8 +36,6 @@ import { RegisterComponent } from './Login/register/register.component';
     NgbModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
     ]),
     AppRoutingModule
   ],
