@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Datos;
 using Entity;
 
-namespace Logica
+namespace Logica 
 {
     public class EstudianteService
     {

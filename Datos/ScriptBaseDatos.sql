@@ -21,5 +21,25 @@ CREATE TABLE [dbo].[Estudiante](
 [Correo] [nvarchar](30) NULL,
 ) 
 GO
+CREATE TABLE [dbo].[Empresa](
+[Nit] [nvarchar](20) NOT NULL PRIMARY KEY,
+[RazonSocial] [nvarchar](40) NULL,
+[Pais] [nvarchar](15) NULL,
+[Departamento] [nvarchar](10) NULL,
+[Ciudad] [nvarchar](20) NULL,
+[Direccion] [nvarchar](20) NULL,
+[Sector] [nvarchar](15) NULL,
+[Descripcion] [nvarchar](80) NULL,
+[NombreRepresentante] [nvarchar](20) NULL,
+[ApellidoRepresentante] [nvarchar](20) NULL,
+[CedulaRepresentante] [nvarchar](10) NULL,
 
+) 
+GO
+
+        public string Sector { get; set; }
+        public string Descripcion { get; set; }
+        public string NombreRepresentante { get; set; }
+        public string ApellidoRepresentante { get; set; }
+        public string CedulaRepresentante { get; set; }
 COMMIT
