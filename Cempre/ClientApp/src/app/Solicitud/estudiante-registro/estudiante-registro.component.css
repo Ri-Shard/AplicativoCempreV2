@@ -5,6 +5,7 @@
   
 }
 
+
 *, *:before, *:after {
     padding: 0;
     margin: 0;
@@ -104,6 +105,7 @@
     display: flex;
     align-items: flex-start;
 }
+ 
 
 /* step */
 .step {
@@ -115,8 +117,40 @@
     transition: all .2s linear;
 }
 
+#lbl1{
+    position: absolute;
+    left:50px;
+}
+#sexo,#estadoCivil,#semestre{
+    position: absolute;
+    left:200px;
+    width : 150px;
+}
+#margintop{
+    margin-top:50px ;
+    width : 900px;
+}
+#centrob{
+    margin-left:auto;
+     margin-right:auto;
+    }
+#fechaNacimiento,#ciudadNacimiento{
+    position: absolute;
+    left:250px;
+    width : 200px;
+}
+#sexd,#fechaNacimientod,#ciudadNacimientod{
+    position: absolute;
+    left:400px;
+}
+
+input, button {
+    width : 150px;
+    margin: 0;
+  }
 .step.active {
     opacity: 1;
+    position: relative;
 }
 
 .step.to-left {

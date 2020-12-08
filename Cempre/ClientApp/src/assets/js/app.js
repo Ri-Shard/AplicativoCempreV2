@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  $('#myTable').DataTable();
+
   $(".form-wrapper .button").click(function(){
     var button = $(this);
     var currentSection = button.parents(".section");
@@ -16,4 +18,6 @@ $(document).ready(function(){
       $(document).find(".steps li").first().addClass("is-active");
     }
   });
+
 });
+

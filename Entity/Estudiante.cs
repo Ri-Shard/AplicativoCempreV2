@@ -17,10 +17,11 @@ namespace Entity
         public string Conocimientoyprac { get; set; }
         public string Seminarios { get; set; }
         public string Distinciones { get; set; }
-        public int Edad { get; set; }
         public string Sexo { get; set; }
-        public int Semestre { get; set; }
+        public string Semestre { get; set; }
         public string Correo { get; set; }
+
+
     }
 }
 

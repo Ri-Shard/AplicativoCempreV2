@@ -15,6 +15,10 @@ import { RegistrarComponent } from './Gestion/registrar/registrar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './Login/login/login.component';
 import { RegisterComponent } from './Login/register/register.component';
+import { EmpresaRegistroComponent } from './Solicitud/empresa-registro/empresa-registro.component';
+import { EmpresaConsultaComponent } from './Solicitud/empresa-consulta/empresa-consulta.component';
+import { EmpresaPerfilComponent } from './Solicitud/perfil/empresa-perfil/empresa-perfil.component';
+import { EstudiantePerfilComponent } from './Solicitud/perfil/estudiante-perfil/estudiante-perfil.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { RegisterComponent } from './Login/register/register.component';
     RegistrarComponent,
     FooterComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    EmpresaRegistroComponent,
+    EmpresaConsultaComponent,
+    EmpresaPerfilComponent,
+    EstudiantePerfilComponent
   ],
   imports: [
     ReactiveFormsModule,

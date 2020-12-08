@@ -19,8 +19,8 @@ namespace Datos
         {
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"Insert Into Estudiante (Identificacion,Nombres,Apellido,FechaNacimiento,CiudadNacimiento,EstadoCivil,Telefono,Eps,InvOproyec,Conocimientoyprac,Seminarios,Distinciones,Edad,Sexo,Semestre,Correo) 
-                                        values (@Identificacion,@Nombres,@Apellido,@FechaNacimiento,@CiudadNacimiento,@EstadoCivil,@Telefono,@Eps,@InvOproyec,@Conocimientoyprac,@Seminarios,@Distinciones,@Edad,@Sexo,@Semestre,@Correo)";
+                command.CommandText = @"Insert Into Estudiante (Identificacion,Nombres,Apellido,FechaNacimiento,CiudadNacimiento,EstadoCivil,Telefono,Eps,InvOproyec,Conocimientoyprac,Seminarios,Distinciones   ,Sexo,Semestre,Correo) 
+                                        values (@Identificacion,@Nombres,@Apellido,@FechaNacimiento,@CiudadNacimiento,@EstadoCivil,@Telefono,@Eps,@InvOproyec,@Conocimientoyprac,@Seminarios,@Distinciones,@Sexo,@Semestre,@Correo)";
                 command.Parameters.AddWithValue("@Identificacion", estudiante.Identificacion);
                 command.Parameters.AddWithValue("@Nombres", estudiante.Nombres);
                 command.Parameters.AddWithValue("@Apellido", estudiante.Apellido);
@@ -34,7 +34,6 @@ namespace Datos
                 command.Parameters.AddWithValue("@Seminarios", estudiante.Seminarios);
                 command.Parameters.AddWithValue("@Distinciones", estudiante.Distinciones);
                 command.Parameters.AddWithValue("@Sexo", estudiante.Sexo);
-                command.Parameters.AddWithValue("@Edad", estudiante.Edad);
                 command.Parameters.AddWithValue("@Semestre", estudiante.Semestre);
                 command.Parameters.AddWithValue("@Correo", estudiante.Correo);
                 var filas = command.ExecuteNonQuery();
@@ -88,8 +87,7 @@ namespace Datos
             estudiante.Seminarios = (string)dataReader["Seminarios"];
             estudiante.Distinciones = (string)dataReader["Distinciones"];
             estudiante.Sexo = (string)dataReader["Sexo"];
-            estudiante.Edad = (int)dataReader["Edad"];
-            estudiante.Semestre = (int)dataReader["Semestre"];
+            estudiante.Semestre = (string)dataReader["Semestre"];
             estudiante.Correo = (string)dataReader["Correo"];
             return estudiante;
         }

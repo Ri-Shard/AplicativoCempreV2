@@ -28,11 +28,10 @@ namespace Cempre.Models {
         public string Conocimientoyprac { get; set; }
         public string Seminarios { get; set; }
         public string Distinciones { get; set; }
-        public int Edad { get; set; }
-       [Required(ErrorMessage = "La Edad es requerida")]
+       [Required(ErrorMessage = "El sexo es requerido")]
         public string Sexo { get; set; }
        [Required(ErrorMessage = "El Semestre es requerido")]
-        public int Semestre { get; set; }
+        public string Semestre { get; set; }
        [Required(ErrorMessage = "El correo es Requerido")]
         public string Correo { get; set; }
 
@@ -55,7 +54,6 @@ namespace Cempre.Models {
             Conocimientoyprac = estudiante.Conocimientoyprac;
             Seminarios = estudiante.Seminarios;
             Distinciones = estudiante.Distinciones;
-            Edad = estudiante.Edad;
             Sexo = estudiante.Sexo;
             Semestre = estudiante.Semestre;
             Correo = estudiante.Correo;

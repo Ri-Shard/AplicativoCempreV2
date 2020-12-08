@@ -1,94 +1,11 @@
-<!-- <hr style="color: azure;"/>
-<div id="container" class="container fadeIn animated" style="max-width: 20cm ; position: relative ">
-    <div class="card">
-        <div class="card-header text-md-center" style="background-color: rgb(245, 245, 245);">
-            <h2 style="color: black;">Registrar Estudiante </h2>
-        </div>
-        <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
-
-             <div class="card-body">
-                    <h6>Informacion Estudiante</h6>
-                    <hr />
-                    <div class="form-group row">
-                        <div class="col-sm-2" style="max-width:100%">
-                            <p>Identificacion: </p>
-                        </div>
-                        <div class="col-sm-4" style="max-width:100%">
-                            <input type="text"   name="identificacion"  formControlName="identificacion"  class="form-control" tabindex="17"  [class.is-invalid]="identificacioninvalido" />
-                            <div *ngIf="identificacioninvalido" class="text-danger">Se require la identificacion</div>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-2" style="max-width:100%">
-                            <p>Nombre: </p>
-                        </div>
-                        <div class="col-sm-4" style="max-width:100%">
-                            <input type="text"   name="nombre" maxlength="50"   formControlName="nombre"  class="form-control"  tabindex="17" [class.is-invalid]="nombreinvalido" />
-                            <div *ngIf="nombreinvalido" class="text-danger">Se requiere el Nombre del Estudiante</div>
-                        </div>
-                        <div class="col-sm-2" style="max-width:100%">
-                            <p>sexo: </p>
-                        </div>
-                        <div class="col-sm-4" style="max-width:100%">
-                            <input type="text"   name="sexo"  maxlength="1"  formControlName="sexo"  class="form-control"  tabindex="17" [class.is-invalid]="sexoinvalido" />
-                            <div *ngIf="sexoinvalido" class="text-danger">Se requiere el sexo del Estudiante</div>
-                        </div>
-                        <div class="col-sm-2" style="max-width:100%">
-                            <p>Edad: </p>
-                        </div>
-                        <div class="col-sm-4" style="max-width:100%">
-                            <input type="number"   name="edad" maxlength="2"   formControlName="edad"  class="form-control"  tabindex="17" [class.is-invalid]="edadinvalido" />
-                            <div *ngIf="edadinvalido" class="text-danger">Se requiere La edad del Estudiante</div>
-                        </div>  
-                        <div class="col-sm-2" style="max-width:100%">
-                            <p>Semestre: </p>
-                        </div>
-                        <div class="col-sm-4" style="max-width:100%">
-                            <input type="number" disabled  name="semestre"  maxlength="2"  formControlName="semestre"  class="form-control"  tabindex="17" [class.is-invalid]="semestreinvalido" />
-                            <div *ngIf="semestreinvalido" class="text-danger">Se requiere el sexo del Estudiante</div>
-                        </div>
-                        <div class="col-sm-2" style="max-width:100%">
-                            <p>Correo: </p>
-                        </div>
-                        <div class="col-sm-4" style="max-width:100%">
-                            <input type="email"   name="correo" maxlength="50"   formControlName="correo"  class="form-control"  tabindex="17" [class.is-invalid]="correoinvalido" />
-                            <div *ngIf="correoinvalido" class="text-danger">Se requiere el correo del Estudiante</div>
-                        </div>
-                    </div>
-                    <hr />
-
-                    <div class="form-group row ">
-                        <div class="col-sm-4 " style="max-width:100% ">
-                            <button class="btn btn-outline-primary "> Siguiente</button>
-                        </div>
-                    </div>
-             </div>
-
-             <div  class="card-body" visible="false">
-                <h2>aasdhasjidhasd</h2>
-             </div>
-
-         </form>
-    </div>
-    </div>
-
-<!-- 
-    <div class=" col-sm-2 " style="max-width:100% ">
-        <button type="submit"  class="btn btn-success " (click)="onSubmit() " [disabled]="formGroup.invalid">Registrar</button>
-    </div>
-    <div class="col-sm-4 " style="max-width:100% ">
-        <button class="btn btn-danger "  [routerLink]="[ '/gestionRegistro'] ">Cancelar</button>
-    </div> -->
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <title style="margin-top: auto;">Registro</title>
-        <!-- <script src="assets/js/app.js"></script> -->
-
+        <script src="assets/js/app.js"></script> 
     </head>
-    <body>
-        
+    <body>    
         <div class="container">
             <div class="wrapper">
           <ul class="steps">
@@ -97,73 +14,125 @@
             <li>Paso 3</li>
 
           </ul>
+
+ 
           <form class="form-wrapper" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
-              <fieldset class="section is-active" >
-                      <h3>Informacion Personal</h3>
-                      <div class="row cf">
-                            <input type="text" id="identificacion"  name="identificacion" maxlength="20"  placeholder="Identificacion"  formControlName="identificacion"  class="form-control"  tabindex="17" [class.is-invalid]="identificacion" />
-                            <div *ngIf="identificacioninvalido" class="text-danger">Se requiere la Identificacion</div>
+            <fieldset class="section is-active" >
+              <h3>Informacion Basica Personal</h3>
 
-                            <input type="text" id="nombres"  name="nombres" maxlength="20"  placeholder="Nombres"  formControlName="nombres"  class="form-control"  tabindex="17" [class.is-invalid]="nombreinvalido" />
-                            <div *ngIf="nombreinvalido" class="text-danger">Se requiere el Nombre</div>
+              <label id="lbl1"for="identificacion">Identificacion:</label>
+              <input  type="text" id="identificacion"  name="identificacion" maxlength="20"  placeholder="Ingrese Identificacion"  formControlName="identificacion"  class="form-control"  tabindex="17" [class.is-invalid]="identificacion" />
+              <div *ngIf="identificacioninvalido" class="text-danger">Se requiere la Identificacion</div>
 
-                            <input type="text" id="apellido"  name="apellido" maxlength="20"  placeholder="Apellido"  formControlName="apellido"  class="form-control"  tabindex="17" [class.is-invalid]="apellidoinvalido" />
-                            <div *ngIf="apellidoinvalido" class="text-danger">Se requiere el Apellido</div> 
+              <label id="lbl1"for="nombres">Nombres:</label>
+              <input type="text" id="nombres"  name="nombres" maxlength="20"  placeholder="Ingrese Nombres"  formControlName="nombres"  class="form-control" [class.is-invalid]="nombreinvalido" />
+              <div *ngIf="nombreinvalido" class="text-danger">Se requiere el Nombre</div>
 
-                            <input type="date" id="fechaNacimiento"  name="fechaNacimiento" maxlength="20"  placeholder="Fecha de Nacimiento"  formControlName="fechaNacimiento"  class="form-control"  tabindex="17" [class.is-invalid]="fechainvalido" />
-                            <div *ngIf="fechainvalido" class="text-danger">Se requiere la fecha de nacimiento</div> 
+              <label id="lbl1"for="apellido">Apellido:</label>
+              <input type="text" id="apellido"  name="apellido" maxlength="20"  placeholder=" Ingrese Apellido"  formControlName="apellido"  class="form-control"   [class.is-invalid]="apellidoinvalido" />
+              <div *ngIf="apellidoinvalido" class="text-danger">Se requiere el Apellido</div> 
+      
+              <label id="lbl1"for="correo">Correo Institucional:</label>
+              <input type="text" id="email"  name="correo" maxlength="50"  placeholder="Ingrese Email"  formControlName="correo"  class="form-control"   [class.is-invalid]="correoinvalido" />
+               <div *ngIf="correoinvalido" class="text-danger">Se requiere el correo estudiantil del solicitante</div>
 
-                            <input type="text" id="ciudadNacimiento"  name="ciudadNacimiento" maxlength="20"  placeholder="Ciudad de Nacimiento"  formControlName="ciudadNacimiento"  class="form-control"  tabindex="17" [class.is-invalid]="ciudadNinvalido" />
-                            <div *ngIf="ciudadNinvalido" class="text-danger">Se requiere la ciudad de nacimiento</div> 
+               <label id="lbl1"for="telefono">Telefono:</label>
+               <input type="text" id="telefono"  name="telefono" maxlength="10"  placeholder="Telefono"  formControlName="telefono"  class="form-control"   [class.is-invalid]="telefinvalido" />
+               <div *ngIf="telefinvalido" class="text-danger">Se requiere el Telefono del Estudiante</div>  
 
-                            <input type="text" id="telefono"  name="telefono" maxlength="10"  placeholder="Telefono"  formControlName="telefono"  class="form-control"  tabindex="17" [class.is-invalid]="telefinvalido" />
-                            <div *ngIf="telefinvalido" class="text-danger">Se requiere el Telefono del Estudiante</div>  
+               <label id="lbl1" for="sexo">Sexo:</label>
+              <select id ="sexo" name="sexo" formControlName="sexo"  class="form-control"  tabindex="17" [class.is-invalid]="sexoinvalido">
+                <option value="M">Masculino</option> 
+                <option value="F" selected>Femenino</option>
+                <option value="P">Prefiere no Decirlo</option>
+              </select><br>
+              <div *ngIf="sexoinvalido" id="sexd"class="text-danger">Seleccione uno</div>    <br>
+               
+            <div class="button" >Next</div>
 
-                            <input type="text" id="eps"  name="eps" maxlength="50"  placeholder="Eps"  formControlName="eps"  class="form-control"  tabindex="17" [class.is-invalid]="epsinvalido" />
-                            <div *ngIf="epsinvalido" class="text-danger">Se requiere la EPS del Estudiante</div>    
+          </fieldset> 
+             <fieldset class="section ">
+              <h3> Informacion Especifica </h3>
+               
+              <label id="lbl1" for="ciudadNacimiento">Ciudad de Nacimiento:</label>
+              <input type="text" id="ciudadNacimiento"  name="ciudadNacimiento" maxlength="20"  placeholder="Ciudad de Nacimiento"  formControlName="ciudadNacimiento"  class="form-control"  tabindex="17" [class.is-invalid]="ciudadNinvalido" />
+              <div id="ciudadNacimientod" *ngIf="ciudadNinvalido" class="text-danger">Se requiere la ciudad de nacimiento</div> <br><br>
 
-                            <select name="estadoCivil"  formControlName="estadoCivil"  class="form-control"  tabindex="17" [class.is-invalid]="estadoCinvalido">
-                                <option value="Soltero">Soltero</option> 
-                                <option value="Casado" selected>Casado</option>
-                                <option value="Union Libre">Union Libre</option>
-                              </select>
-                              <div *ngIf="estadoCinvalido" class="text-danger">Seleccione uno</div>    
-                              
+              <label id="lbl1"for="eps">EPS:</label>
+              <input type="text" id="eps"  name="eps" maxlength="50"  placeholder="Eps"  formControlName="eps"  class="form-control"  tabindex="17" [class.is-invalid]="epsinvalido" />
+              <div *ngIf="epsinvalido" class="text-danger">Se requiere la EPS del Estudiante</div> 
 
-                              <select name="sexo" formControlName="sexo"  class="form-control"  tabindex="17" [class.is-invalid]="sexoinvalido">
-                                  <option value="Masculino">Masculino</option> 
-                                  <option value="Femenino" selected>Femenino</option>
-                                  <option value="Prefiere no Decirlo">Prefiere no Decirlo</option>
-                                </select>
-                                <div *ngIf="sexoinvalido" class="text-danger">Seleccione uno</div>    
+                <label id="lbl1" for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento"  name="fechaNacimiento" maxlength="20"  placeholder="Fecha de Nacimiento"  formControlName="fechaNacimiento"  class="form-control"  tabindex="17" [class.is-invalid]="fechainvalido" />
+                <div id="fechaNacimientod"*ngIf="fechainvalido" class="text-danger">Se requiere la fecha de nacimiento</div> <br><br>
 
-                            <input type="text" id="email"  name="correo" maxlength="50"  placeholder="Email"  formControlName="correo"  class="form-control"  tabindex="17" [class.is-invalid]="correoinvalido" />
-                            <div *ngIf="correoinvalido" class="text-danger">Se requiere el correo del Estudiante</div>
+                <label id="lbl1" for="estadoCivil">Estado Civil:</label>
+                <select id="estadoCivil" name="estadoCivil"  formControlName="estadoCivil"  class="form-control"  tabindex="17" [class.is-invalid]="estadoCinvalido">
+                  <option value="Soltero">Soltero</option> 
+                  <option value="Casado" selected>Casado</option>
+                  <option value="Union Libre">Union Libre</option>
+                </select>
+                <div *ngIf="estadoCinvalido" class="text-danger">Seleccione uno</div>    
 
-                            <button type="submit"  class="btn btn-success " (click)="onSubmit() " >Registrar</button>
-
-                            <div class="button">Next</div>
-                        </div>
-                    </fieldset>
+              <div class="button">Next</div>
+            </fieldset>
             <fieldset class="section ">
               <h3> Informacion Academica </h3>
               <div class="row cf">
+                <label id="lbl1" for="semestre">Semestre:</label>
+                <select id="semestre"name="semestre" formControlName="semestre"  class="form-control"  tabindex="17" [class.is-invalid]="semestreinvalido">
+                  <option value="5">5</option> 
+                  <option value="6" >6</option>
+                  <option value="7">7  </option>
+                  <option value="8">8  </option>
+                  <option value="9">9  </option>
+                  <option value="10" selected>10  </option>
+                </select><br>
+                <div *ngIf="semestreinvalido" class="text-danger">Seleccione uno</div>   <br>  
 
-            </div>
-              <div class="button">Next</div>
-            </fieldset>
-            <fieldset class="section">
-              <h3></h3>
-              <input class="submit button" type="submit" value="Sign Up" (click)="onSubmit()">
-              <button type="submit"  class="btn btn-success " (click)="onSubmit() " [disabled]="formGroup.invalid">Registrar</button>
-            </fieldset> 
-            <fieldset class="section">
-              <h3>Account Created!</h3>
-              <p>Your account has now been created.</p>
-              <div class="button">Reset Form</div>
-            </fieldset>
-          </form>
+<div id="margintop">
+  <label id="" for="invOproyec">Ha realizado investigaciones y proyectos?</label>
+  <label for="si">Si</label>
+  <input type="checkbox" id="si"(click)=" mostrar = true "><br>
+  <textarea *ngIf="mostrar" name="invOproyec" formControlName="invOproyec" class="form-control" rows="5" cols="60" placeholder="Escribe aqui tus investigaciones y proyectos"></textarea>
+  
+                <label id="" for="conocimientoyprac">Tiene conocimiento Previo en Practicas?</label>
+                <label for="si2">Si</label>
+                <input type="checkbox" id="si" (click)=" mostrar2 = true "><br>
+                <textarea *ngIf="mostrar2"  name="conocimientoyprac" formControlName="conocimientoyprac" class="form-control" rows="5" cols="60" placeholder="Donde?"></textarea>
+                
+                <label id="" for="seminarios">Posee Seminarios realizados?</label>
+                <label for="si3">Si</label>
+                <input type="checkbox" id="si" (click)=" mostrar3 = true "><br>
+                <textarea *ngIf="mostrar3"  name="seminarios" formControlName="seminarios" class="form-control" rows="5" cols="60" placeholder="Escribe aqui tus Seminarios Realizados"></textarea>
+                
+                <label id="" for="distinciones">Posee Distinciones Academicas?</label> 
+                <label for="si4">Si</label>
+                <input type="checkbox" id="si" (click)=" mostrar4 = true "><br>
+                <textarea *ngIf="mostrar4"  name="distinciones" formControlName="distinciones" class="form-control" rows="5" cols="60" placeholder="Escribe aqui tus distinciones Recibidas"></textarea>
+              </div>
+
+
+                
+                <div class="button" (click)="onSubmit()" >Next</div>
+
+                <!--                 <button class="btn btn-primary"  (click)="onSubmit()" [disabled]="!formGroup.valid">Registrar</button>
+ -->
+ <div id="centrob">
+   
+   <button type="submit" class="btn btn-primary" [disabled]="!formGroup.valid">Registrar</button>
+   
+  </div>
+</div>
+          </fieldset>
+          <fieldset class="section">
+            <h3>Registrado Satisfactoriamente!</h3><br>
+            <p>Puede revisar su informacion en el apartado de Perfil</p>
+            <p>Recuerde realizar el pago desde el vortal universitario</p>
+            <button class="btn btn-primary"  [routerLink]="[ '/perfil'] ">Volver</button>
+          </fieldset>
+          </form> 
         </div>
-    </div>
+    </div> 
 </body>
       </html>

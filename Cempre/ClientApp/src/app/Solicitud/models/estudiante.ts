@@ -12,7 +12,6 @@ export class Estudiante {
     seminarios: string;
     distinciones:string
     sexo: string;
-    edad: number;
     semestre: number;
     correo : string;
 

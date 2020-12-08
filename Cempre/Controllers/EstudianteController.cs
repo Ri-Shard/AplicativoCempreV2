@@ -59,7 +59,6 @@ namespace Cempre.Controllers
             Conocimientoyprac = estudianteInput.Conocimientoyprac,
             Seminarios = estudianteInput.Seminarios,
             Distinciones = estudianteInput.Distinciones,
-            Edad = estudianteInput.Edad,
             Sexo = estudianteInput.Sexo,
             Semestre = estudianteInput.Semestre,
             Correo = estudianteInput.Correo,

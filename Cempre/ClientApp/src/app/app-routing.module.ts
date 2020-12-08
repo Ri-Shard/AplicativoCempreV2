@@ -6,6 +6,10 @@ import {EstudianteRegistroComponent} from './Solicitud/estudiante-registro/estud
 import { RegistrarComponent } from './Gestion/registrar/registrar.component';
 import { LoginComponent } from './Login/login/login.component';
 import { RegisterComponent } from './Login/register/register.component';
+import { EmpresaConsultaComponent } from './Solicitud/empresa-consulta/empresa-consulta.component';
+import { EmpresaRegistroComponent } from './Solicitud/empresa-registro/empresa-registro.component';
+import { EmpresaPerfilComponent } from './Solicitud/perfil/empresa-perfil/empresa-perfil.component';
+import { EstudiantePerfilComponent } from './Solicitud/perfil/estudiante-perfil/estudiante-perfil.component';
 
 const routes: Routes = [
   {
@@ -13,12 +17,27 @@ const routes: Routes = [
   component:EstudianteConsultaComponent
   },
   {
+  path: 'empresaConsulta',
+  component:EmpresaConsultaComponent
+  },
+  { path: 'empresaRegistro',
+  component:EmpresaRegistroComponent
+  },
+  {
     path: 'estudianteRegistro',
     component:EstudianteRegistroComponent
   },
   {
-      path: 'gestionRegistro',
+      path: 'gestion',
       component:RegistrarComponent
+    },
+  {
+      path: 'empresaPerfil',
+      component:EmpresaPerfilComponent
+    },
+  {
+      path: 'estudiantePerfil',
+      component:EstudiantePerfilComponent
     },
     {
         path: 'loginRegistro',

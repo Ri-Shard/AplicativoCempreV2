@@ -1,0 +1,87 @@
+razonSocial: ['', Validators.required],
+nit: ['', Validators.required],
+pais: ['', Validators.required],
+departamento: ['', Validators.required],
+ciudad: ['', Validators.required],
+direccion: ['', Validators.required],
+sector: ['', Validators.required],
+descripcion: ['', Validators.required],
+nombreRepresentante: ['', Validators.required],
+apellidoRepresentante: ['', Validators.required],
+cedulaRepresentante: ['', Validators.required], 
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title style="margin-top: auto;">Registro</title>
+        <script src="assets/js/app.js"></script> 
+    </head>
+    <body>    
+        <div class="container">
+            <div class="wrapper">
+          <ul class="steps">
+              <li class="is-active">Paso 1</li>
+            <li>Paso 2</li>
+            <li>Paso 3</li>
+
+          </ul>
+
+ 
+          <form class="form-wrapper" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <fieldset class="section is-active" >
+              <h3>Informacion Basica </h3>
+
+              <label id="lbl1"for="razonsocial">Razon Social:</label>
+              <input  type="text" id="razonSocial"  name="razonSocial" maxlength="20"  placeholder="Ingrese Razon Social"  formControlName="razonSocial"  class="form-control"  tabindex="17" [class.is-invalid]="razoninvalido" />
+              <div *ngIf="razoninvalido" class="text-danger">Se requiere la Razon Social</div>
+
+              <label id="lbl1"for="nit">NIT:</label>
+              <input type="text" id="nit"  name="nit" maxlength="20"  placeholder="Ingrese NIT"  formControlName="nit"  class="form-control" [class.is-invalid]="nitinvalido" />
+              <div *ngIf="nitinvalido" class="text-danger">Se requiere el NIT</div>
+            
+               <label id="lbl1" for="pais">Pais:</label>
+              <select id ="pais" name="pais" formControlName="pais"  class="form-control"  tabindex="17" [class.is-invalid]="paisinvalido" >
+                  <option *ngFor="let pais of paises" 
+                    [value]="pais.nombre"> 
+                {{pais.nombre}}
+                </option>
+               </select>                
+              <div *ngIf="sexoinvalido" id="sexd"class="text-danger">Seleccione uno</div>    <br>
+               
+            <div class="button" >Next</div>
+
+          </fieldset> 
+             <fieldset class="section ">
+              <h3> Informacion Representante </h3>
+                 
+
+              <div class="button">Next</div>
+            </fieldset>
+            <fieldset class="section ">
+              <h3> Informacion Academica </h3>
+              <div class="row cf">
+
+                
+                <div class="button" (click)="onSubmit()" >Next</div>
+
+                <!--                 <button class="btn btn-primary"  (click)="onSubmit()" [disabled]="!formGroup.valid">Registrar</button>
+ -->
+ <div id="centrob">
+   
+   <button type="submit" class="btn btn-primary" [disabled]="!formGroup.valid">Registrar</button>
+   
+  </div>
+</div>
+          </fieldset>
+          <fieldset class="section">
+            <h3>Registrado Satisfactoriamente!</h3><br>
+            <p>Puede revisar su informacion en el apartado de Perfil</p>
+            <p>Recuerde realizar el pago desde el vortal universitario</p>
+            <button class="btn btn-primary"  [routerLink]="[ '/perfil'] ">Volver</button>
+          </fieldset>
+          </form> 
+        </div>
+    </div> 
+</body>
+      </html>
