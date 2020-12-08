@@ -1,15 +1,3 @@
-razonSocial: ['', Validators.required],
-nit: ['', Validators.required],
-pais: ['', Validators.required],
-departamento: ['', Validators.required],
-ciudad: ['', Validators.required],
-direccion: ['', Validators.required],
-sector: ['', Validators.required],
-descripcion: ['', Validators.required],
-nombreRepresentante: ['', Validators.required],
-apellidoRepresentante: ['', Validators.required],
-cedulaRepresentante: ['', Validators.required], 
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -46,8 +34,6 @@ cedulaRepresentante: ['', Validators.required],
                  [value]="pais.nombre"> 
                  {{pais.nombre}}
                 </option>
-                <option value="color">Color</option>
-                <option value="country">Country</option>
             </select>                
             <div *ngIf="paisinvalido" id="sexd"class="text-danger">Seleccione uno</div>    <br> <br>
         
@@ -61,37 +47,94 @@ cedulaRepresentante: ['', Validators.required],
             <div *ngIf="deptoinvalido" id="sexd"class="text-danger">Seleccione uno</div>    <br>
             <div class="button" >Next</div>
 
-          </fieldset> 
-             <fieldset class="section ">
-              <h3> Informacion Representante </h3>
-                 
+            <br><label id="lbl1" for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad"  name="ciudad" maxlength="20"  placeholder="Ciudad"  formControlName="ciudad"  class="form-control"  tabindex="17" [class.is-invalid]="ciudadinvalido" />
+            <div id="ciudadNacimientod" *ngIf="ciudadinvalido" class="text-danger">Se requiere la ciudad de nacimiento</div>
 
-              <div class="button">Next</div>
-            </fieldset>
-            <fieldset class="section ">
-              <h3> Informacion Academica </h3>
-              <div class="row cf">
+            <br><label id="lbl1" for="direccion">Direccion:</label>
+            <input type="text" id="direccion"  name="direccion" maxlength="20"  placeholder="Cireccion"  formControlName="direccion"  class="form-control"  tabindex="17" [class.is-invalid]="direccioninvalido" />
+            <div id="ciudadNacimientod" *ngIf="direccioninvalido" class="text-danger">Se requiere la direccion</div> <br><br>
+        
+            <label id="lbl1" for="sector">Sector Empresa:</label>
+            <select id="sector"name="sector" formControlName="sector"  class="form-control"  tabindex="17" [class.is-invalid]="sectorinvalido">
+              <option value="Agricultura, plantaciones,otros sectores rurales">Agricultura, plantaciones,otros sectores rurales</option> 
+              <option value="Alimentación, bebidas, tabaco" >Alimentación, bebidas, tabaco</option>
+              <option value="Comercio">Comercio  </option>
+              <option value="Construcción">Construcción  </option>
+              <option value="Educación">Educación  </option>
+              <option value="Fabricación de material de transporte ">Fabricación de material de transporte </option>
+              <option value="Función pública ">Función pública </option>
+              <option value="Hotelería, restauración, turismo ">Hotelería, restauración, turismo </option>
+              <option value="Industrias químicas ">Industrias químicas </option>
+              <option value="Ingenieria mecánica y eléctrica">Ingenieria mecánica y eléctrica  </option>
+              <option value="Medios de comunicación, cultura, gráficos">Medios de comunicación, cultura, gráficos  </option>
+              <option value="Minería (carbón, otra minería)">Minería (carbón, otra minería) </option>
+              <option value="Petroleo y producción de gas, refinación de petroleo">Petroleo y producción de gas, refinación de petroleo  </option>
+              <option value="Producción de metales básicos ">Producción de metales básicos </option>
+              <option value="Servicios de correos y de telecomunicaciones">Servicios de correos y de telecomunicaciones </option>
+              <option value="Servicios de salud ">Servicios de salud  </option>
+              <option value="Servicios financieros, servicios profesionales ">Servicios financieros, servicios profesionales</option>
+              <option value="Servicios públicos (agua, gas, electricidad) ">Servicios públicos (agua, gas, electricidad)  </option>
+              <option value="Silvicultura, madera, celulosa, papel ">Silvicultura, madera, celulosa, papel  </option>
+              <option value="Textiles, vestido, cuero, calzado ">Textiles, vestido, cuero, calzado </option>
+              <option value="Transporte (inluyendo aviación civil, ferrocarriles, transporte por carretera) ">Transporte (inluyendo aviación civil, ferrocarriles, transporte por carretera)  </option>
+              <option value="Transporte marítimo, puertos, pesca, transporte interior ">Transporte marítimo, puertos, pesca, transporte interior  </option>
+            </select><br>
+            <div id="sexod"  *ngIf="sectorinvalido" class="text-danger">Seleccione uno</div>   <br>  
+        </fieldset> 
+        
+        <fieldset class="section">
+            <h3>Descripcion Actividades de la empresa</h3><br>
+            <textarea   name="descripcion" formControlName="descripcion" class="form-control" rows="5" cols="60" placeholder="Escribe una breve descripcion de las actividades de la empresa"></textarea>          
+            <div class="button">Next</div>
+        </fieldset>
 
-                
-                <div class="button" (click)="onSubmit()" >Next</div>
+                    <fieldset class="section ">
+                     <h3> Informacion Representante </h3>      
+                     
+                     <br><label id="lbl1" for="nombreRepresentante">Nombre Representante:</label>
+                     <input type="text" id="nombreRepresentante"  name="nombreRepresentante" maxlength="20"  placeholder="Nombre del Representante"  formControlName="nombreRepresentante"  class="form-control"  tabindex="17" [class.is-invalid]="nombreRinvalido" />
+                     <div id="ciudadNacimientod" *ngIf="nombreRinvalido" class="text-danger">Se requiere el Nombre del Representante</div>
 
-                <!--                 <button class="btn btn-primary"  (click)="onSubmit()" [disabled]="!formGroup.valid">Registrar</button>
- -->
- <div id="centrob">
-   
-   <button type="submit" class="btn btn-primary" [disabled]="!formGroup.valid">Registrar</button>
-   
-  </div>
-</div>
-          </fieldset>
-          <fieldset class="section">
-            <h3>Registrado Satisfactoriamente!</h3><br>
-            <p>Puede revisar su informacion en el apartado de Perfil</p>
-            <p>Recuerde realizar el pago desde el vortal universitario</p>
-            <button class="btn btn-primary"  [routerLink]="[ '/perfil'] ">Volver</button>
-          </fieldset>
+                     <label id="lbl1" for="apellidoRepresentante">Apellido Representante:</label>
+                     <input type="text" id="apellidoRepresentante"  name="apellidoRepresentante" maxlength="20"  placeholder="Apellido del Representante"  formControlName="apellidoRepresentante"  class="form-control"  tabindex="17" [class.is-invalid]="apellidoRinvalido" />
+                     <div id="ciudadNacimientod" *ngIf="apellidoRinvalido" class="text-danger">Se requiere el Apellido del Representante</div>
+
+                     <label id="lbl1" for="cedulaRepresentante">Cedula:</label>
+                     <input type="text" id="cedulaRepresentante"  name="cedulaRepresentante" maxlength="20"  placeholder="Cedula del Representante"  formControlName="cedulaRepresentante"  class="form-control"  tabindex="17" [class.is-invalid]="cedulaRinvalido" />
+                     <div id="ciudadNacimientod" *ngIf="cedulaRinvalido" class="text-danger">Se requiere la Cedula del Representante</div>
+
+                     <br><div id="centrob">                   
+                       <button type="submit" class="btn btn-primary" [disabled]="!formGroup.valid" [routerLink]="[ '/empresaPerfil']" >Registrar</button>                  
+                      </div>
+                   </fieldset>
           </form> 
         </div>
     </div> 
 </body>
-      </html>
+      </html> 
+
+      
+      
+       
+      
+       
+      
+       
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+

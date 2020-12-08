@@ -45,14 +45,14 @@ export class EmpresaRegistroComponent implements OnInit {
     });
     }
     console.warn(this.formGroup.value);
-    //this.add();
+    this.add();
     }
     add() {
       this.empresa = this.formGroup.value;
       this._empresaService.post(this.empresa).subscribe(p => {
         if (p != null) {
           this.empresa = p;
-         alert('Empresa Creada!');
+         alert('Empresa Registrada Satisfactoriamente!');
         } else {
            alert('ERROR REVISE LOS CAMPOS!');
         }
@@ -64,13 +64,13 @@ export class EmpresaRegistroComponent implements OnInit {
         nit: ['', Validators.required],
         pais: ['', Validators.required],
         departamento: ['', Validators.required],
-/*         ciudad: ['', Validators.required],
+        ciudad: ['', Validators.required],
         direccion: ['', Validators.required],
         sector: ['', Validators.required],
         descripcion: ['', Validators.required],
         nombreRepresentante: ['', Validators.required],
         apellidoRepresentante: ['', Validators.required],
-        cedulaRepresentante: ['', Validators.required],  */
+        cedulaRepresentante: ['', Validators.required], 
       }); 
       }
     get razoninvalido() {
@@ -88,7 +88,7 @@ export class EmpresaRegistroComponent implements OnInit {
     get ciudadinvalido() {
       return this.formGroup.get('ciudad').invalid && this.formGroup.get('ciudad').touched;
     }
-    get direccionCinvalido() {
+    get direccioninvalido() {
       return this.formGroup.get('direccion').invalid && this.formGroup.get('direccion').touched;
     }
     get sectorinvalido() {
