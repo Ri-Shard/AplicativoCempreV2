@@ -21,7 +21,7 @@ namespace Datos
             List<Pais> paises = new List<Pais>();
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "Select * from pais";
+                command.CommandText = "SELECT * FROM pais ORDER BY paisnombre ASC";
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
                 {

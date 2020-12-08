@@ -39,16 +39,26 @@ cedulaRepresentante: ['', Validators.required],
               <label id="lbl1"for="nit">NIT:</label>
               <input type="text" id="nit"  name="nit" maxlength="20"  placeholder="Ingrese NIT"  formControlName="nit"  class="form-control" [class.is-invalid]="nitinvalido" />
               <div *ngIf="nitinvalido" class="text-danger">Se requiere el NIT</div>
-            
-               <label id="lbl1" for="pais">Pais:</label>
-              <select id ="pais" name="pais" formControlName="pais"  class="form-control"  tabindex="17" [class.is-invalid]="paisinvalido" >
-                  <option *ngFor="let pais of paises" 
-                    [value]="pais.nombre"> 
-                {{pais.nombre}}
+
+             <label id="lbl1" for="pais">Pais:</label>
+             <select id ="pais" name="pais" formControlName="pais" class="form-control"  tabindex="17" [class.is-invalid]="paisinvalido" >
+                 <option *ngFor="let pais of paises" 
+                 [value]="pais.nombre"> 
+                 {{pais.nombre}}
                 </option>
-               </select>                
-              <div *ngIf="sexoinvalido" id="sexd"class="text-danger">Seleccione uno</div>    <br>
-               
+                <option value="color">Color</option>
+                <option value="country">Country</option>
+            </select>                
+            <div *ngIf="paisinvalido" id="sexd"class="text-danger">Seleccione uno</div>    <br> <br>
+        
+        <label id="lbl1" for="departamento">Depto:</label>
+              <select id ="departamento" name="departamento" formControlName="departamento"  class="form-control"  tabindex="17" [class.is-invalid]="deptoinvalido" >
+                  <option *ngFor="let depto of deptos" 
+                  [value]="depto.nombre"> 
+                  {{depto.nombre}}
+                </option>
+            </select>                
+            <div *ngIf="deptoinvalido" id="sexd"class="text-danger">Seleccione uno</div>    <br>
             <div class="button" >Next</div>
 
           </fieldset> 

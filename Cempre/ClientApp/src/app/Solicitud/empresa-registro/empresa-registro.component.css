@@ -121,7 +121,7 @@
     position: absolute;
     left:50px;
 }
-#pais,#estadoCivil,#semestre{
+#pais,#departamento,#semestre{
     position: absolute;
     left:200px;
     width : 150px;

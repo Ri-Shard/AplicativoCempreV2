@@ -1,4 +1,4 @@
-import { Pais } from './../Solicitud/models/pais';
+import { Depto } from './../Solicitud/models/depto';
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
@@ -8,7 +8,7 @@ import { HandleHttpErrorService } from '../@base/handle-http-error.service';
 @Injectable({
     providedIn: 'root'
   })
-  export class PaisService {
+  export class DeptoService {
   
     baseUrl: string;
     constructor(
@@ -19,11 +19,11 @@ import { HandleHttpErrorService } from '../@base/handle-http-error.service';
         this.baseUrl = baseUrl;
     }
   
-    get(): Observable<Pais[]> {
-      return this.http.get<Pais[]>(this.baseUrl + 'api/Pais')
+    get(): Observable<Depto[]> {
+      return this.http.get<Depto[]>(this.baseUrl + 'api/Depto')
           .pipe(
-              tap(_ => this.handleErrorService.log('datos pais recibidos')),
-              catchError(this.handleErrorService.handleError<Pais[]>('Consulta Pais', null))
+              tap(_ => this.handleErrorService.log('datos depto recibidos')),
+              catchError(this.handleErrorService.handleError<Depto[]>('Consulta Depto', null))
           );
     }
 
