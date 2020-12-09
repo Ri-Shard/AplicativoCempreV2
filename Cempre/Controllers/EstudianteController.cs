@@ -62,6 +62,7 @@ namespace Cempre.Controllers
             Sexo = estudianteInput.Sexo,
             Semestre = estudianteInput.Semestre,
             Correo = estudianteInput.Correo,
+            Estado = estudianteInput.Estado,
             };
             return estudiante; 
         }

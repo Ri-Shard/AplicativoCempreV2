@@ -14,5 +14,6 @@ export class Estudiante {
     sexo: string;
     semestre: number;
     correo : string;
+    estado : string;
 
 }

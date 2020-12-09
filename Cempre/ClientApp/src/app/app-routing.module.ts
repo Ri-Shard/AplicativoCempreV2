@@ -10,6 +10,9 @@ import { EmpresaConsultaComponent } from './Solicitud/empresa-consulta/empresa-c
 import { EmpresaRegistroComponent } from './Solicitud/empresa-registro/empresa-registro.component';
 import { EmpresaPerfilComponent } from './Solicitud/perfil/empresa-perfil/empresa-perfil.component';
 import { EstudiantePerfilComponent } from './Solicitud/perfil/estudiante-perfil/estudiante-perfil.component';
+import { View1Component } from './Solicitud/empresa-registro/views/view1/view1.component';
+import { View2Component } from './Solicitud/empresa-registro/views/view2/view2.component';
+import { View3Component } from './Solicitud/empresa-registro/views/view3/view3.component';
 
 const routes: Routes = [
   {
@@ -46,6 +49,18 @@ const routes: Routes = [
     {
         path: 'login',
         component:LoginComponent
+      },
+    {
+        path: 'view1',
+        component:View1Component
+      },
+    {
+        path: 'view2',
+        component:View2Component
+      },
+    {
+        path: 'view3',
+        component:View3Component
       },
 ];
 

@@ -20,6 +20,7 @@ namespace Entity
         public string Sexo { get; set; }
         public string Semestre { get; set; }
         public string Correo { get; set; }
+        public string Estado { get; set; }
 
 
     }

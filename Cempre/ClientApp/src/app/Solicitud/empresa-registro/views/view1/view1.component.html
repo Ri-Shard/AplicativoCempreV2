@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title style="margin-top: auto;">Registro</title>
+      </head>
+      <body>
+    
+        <div class="container">
+          <div class="wrapper">
+            <ul class="steps">
+              <li class="is-active">Paso 2</li>
+            </ul>          
+              <form class="form-wrapper" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+              <fieldset class="section is-active">
+                <h3>Descripcion Actividades de la empresa</h3><br>
+                <div class="col-sm-4 text-right" style="max-width:100% ">
+                  <button class="btn btn-danger "  [routerLink]="[ '/empresaRegistro'] ">Atras</button>
+              </div>
+                <textarea   name="descripcion" formControlName="descripcion" class="form-control" rows="5" cols="60" placeholder="Escribe una breve descripcion de las actividades de la empresa" [class.is-invalid]="ciudadinvalido"></textarea>          
+                <div id="descripcion" *ngIf="descripcioninvalido" class="text-danger">Se requiere la descripcion de las actividades de la empresa</div>
+                <br><div id="centrob" >                   
+                  <button type="submit" [disabled]="!formGroup.valid" class="btn btn-primary">Validar informacion</button>                  
+                </div>
+                <button  class="btn btn-primary" [disabled]="!formGroup.valid" [routerLink]="[ '/view2']">Siguiente</button>               </fieldset>
+          </form>
+        </div>
+        </div>
+      </body>
+</html>

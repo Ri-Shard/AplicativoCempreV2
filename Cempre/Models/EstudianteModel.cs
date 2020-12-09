@@ -34,6 +34,7 @@ namespace Cempre.Models {
         public string Semestre { get; set; }
        [Required(ErrorMessage = "El correo es Requerido")]
         public string Correo { get; set; }
+        public string Estado { get; set; }
 
     }
 
@@ -57,6 +58,7 @@ namespace Cempre.Models {
             Sexo = estudiante.Sexo;
             Semestre = estudiante.Semestre;
             Correo = estudiante.Correo;
+            Estado = estudiante.Estado;
 
         }
     }

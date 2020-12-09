@@ -16,6 +16,7 @@ namespace Entity
         public string NombreRepresentante { get; set; }
         public string ApellidoRepresentante { get; set; }
         public string CedulaRepresentante { get; set; }
+        public string Estado { get; set; }
     }
 }
 

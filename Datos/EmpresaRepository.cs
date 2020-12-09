@@ -81,6 +81,7 @@ namespace Datos
             empresa.NombreRepresentante = (string)dataReader["NombreRepresentante"];
             empresa.ApellidoRepresentante = (string)dataReader["ApellidoRepresentante"];
             empresa.CedulaRepresentante = (string)dataReader["CedulaRepresentante"];
+            empresa.Estado = (string)dataReader["Estado"];
 
             return empresa;
         }

@@ -15,14 +15,10 @@ export class EmpresaRegistroComponent implements OnInit {
   formGroup: FormGroup;
   empresa: Empresa;
   paises: Pais[];
-/*   paisesb: Pais[];
- */  pais: Pais;
-/*   paisb: Pais;
- */  deptos: Depto[];
-/*   deptosb: Depto[];
- */  depto: Depto;
-/*   id:number;
- */  constructor(private _empresaService: EmpresaService,private _paisService: PaisService,private _deptoService: DeptoService,  private formBuilder: FormBuilder) {}
+  pais: Pais;
+  deptos: Depto[];
+    depto: Depto;
+   constructor(private _empresaService: EmpresaService,private _paisService: PaisService,private _deptoService: DeptoService,  private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.buildForm();
@@ -49,14 +45,15 @@ export class EmpresaRegistroComponent implements OnInit {
     }
     add() {
       this.empresa = this.formGroup.value;
-      this._empresaService.post(this.empresa).subscribe(p => {
+      localStorage.setItem('datos', JSON.stringify(this.empresa));
+/*       this._empresaService.post(this.empresa).subscribe(p => {
         if (p != null) {
           this.empresa = p;
          alert('Empresa Registrada Satisfactoriamente!');
         } else {
            alert('ERROR REVISE LOS CAMPOS!');
         }
-      });
+      }); */
     }
     buildForm() {
       this.formGroup = this.formBuilder.group({
@@ -67,10 +64,11 @@ export class EmpresaRegistroComponent implements OnInit {
         ciudad: ['', Validators.required],
         direccion: ['', Validators.required],
         sector: ['', Validators.required],
+         /* 
         descripcion: ['', Validators.required],
         nombreRepresentante: ['', Validators.required],
         apellidoRepresentante: ['', Validators.required],
-        cedulaRepresentante: ['', Validators.required], 
+        cedulaRepresentante: ['', Validators.required],  */
       }); 
       }
     get razoninvalido() {
@@ -93,18 +91,6 @@ export class EmpresaRegistroComponent implements OnInit {
     }
     get sectorinvalido() {
       return this.formGroup.get('sector').invalid && this.formGroup.get('sector').touched;
-    }
-    get descripcioninvalido() {
-      return this.formGroup.get('descripcion').invalid && this.formGroup.get('descripcion').touched;
-    }
-    get nombreRinvalido() {
-      return this.formGroup.get('nombreRepresentante').invalid && this.formGroup.get('nombreRepresentante').touched;
-    }
-    get apellidoRinvalido() {
-      return this.formGroup.get('apellidoRepresentante').invalid && this.formGroup.get('apellidoRepresentante').touched;
-    }
-    get cedulaRinvalido() {
-      return this.formGroup.get('cedulaRepresentante').invalid && this.formGroup.get('cedulaRepresentante').touched;
     }
 
 }

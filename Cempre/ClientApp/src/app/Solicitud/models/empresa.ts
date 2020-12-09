@@ -12,4 +12,5 @@
                 nombreRepresentante :string;
                 apellidoRepresentante:string;
                 cedulaRepresentante:string;       
+                estado:string;       
             }

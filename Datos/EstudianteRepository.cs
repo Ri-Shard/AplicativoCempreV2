@@ -89,6 +89,7 @@ namespace Datos
             estudiante.Sexo = (string)dataReader["Sexo"];
             estudiante.Semestre = (string)dataReader["Semestre"];
             estudiante.Correo = (string)dataReader["Correo"];
+            estudiante.Estado = (string)dataReader["Estado"];
             return estudiante;
         }
     }

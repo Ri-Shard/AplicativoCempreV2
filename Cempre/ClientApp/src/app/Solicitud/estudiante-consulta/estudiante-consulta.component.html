@@ -11,7 +11,6 @@
             <th scope="col">identificacion</th>
             <th scope="col">Nombre</th>
             <th scope="col">Sexo</th>
-            <th scope="col">Edad</th>
             <th scope="col">semestre</th>
             <th scope="col">Correo</th>
             <th scope="col">Estado</th>
@@ -22,9 +21,8 @@
           <tr *ngFor = "let estudiante of estudiantes; let i=index">
             <th scope="row">{{i + 1}}</th>
             <td>{{estudiante.identificacion}}</td>
-            <td>{{estudiante.nombre}}</td>
+            <td>{{estudiante.nombres}}</td>
             <td>{{estudiante.sexo}}</td>
-            <td>{{estudiante.edad}}</td>
             <td>{{estudiante.semestre}}</td>
             <td>{{estudiante.correo}}</td>
             <td>{{estudiante.estado}}</td>

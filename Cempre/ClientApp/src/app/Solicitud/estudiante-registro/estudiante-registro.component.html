@@ -3,9 +3,10 @@
     <head>
         <meta charset="utf-8" />
         <title style="margin-top: auto;">Registro</title>
-        <script src="assets/js/app.js"></script> 
     </head>
     <body>    
+      <script src="assets/js/app.js"></script> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <div class="container">
             <div class="wrapper">
           <ul class="steps">
@@ -15,11 +16,14 @@
 
           </ul>
 
- 
+ <!-- ESTADO ESTUDIANTE practicas o disponible  -->
           <form class="form-wrapper" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
             <fieldset class="section is-active" >
               <h3>Informacion Basica Personal</h3>
 
+              <div class="col-sm-4 text-right" style="max-width:100% ">
+                <button class="btn btn-danger "  [routerLink]="[ '/gestion'] ">Atras</button>
+            </div>
               <label id="lbl1"for="identificacion">Identificacion:</label>
               <input  type="text" id="identificacion"  name="identificacion" maxlength="20"  placeholder="Ingrese Identificacion"  formControlName="identificacion"  class="form-control"  tabindex="17" [class.is-invalid]="identificacion" />
               <div *ngIf="identificacioninvalido" class="text-danger">Se requiere la Identificacion</div>

@@ -1,0 +1,41 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title style="margin-top: auto;">Registro</title>
+      </head>
+      <div class="container">
+            <form class="form-wrapper" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <div class="wrapper">
+          <ul class="steps">
+              <li class="is-active">Paso 3</li>
+          </ul>
+          <fieldset class="section is-active">
+            <h3> Informacion Representante </h3>      
+            
+            <div class="col-sm-4 text-right" style="max-width:100% ">
+              <button class="btn btn-danger "  [routerLink]="[ '/view1'] ">Atras</button>
+          </div>
+
+            <label id="lbl1" for="nombreRepresentante">Nombre Representante:</label>
+            <input type="text" id="nombreRepresentante"  name="nombreRepresentante" maxlength="20"  placeholder="Nombre del Representante"  formControlName="nombreRepresentante"  class="form-control"  tabindex="17" [class.is-invalid]="nombreRinvalido" />
+            <div id="ciudadNacimientod" *ngIf="nombreRinvalido" class="text-danger">Se requiere el Nombre del Representante</div>
+        
+            <label id="lbl1" for="apellidoRepresentante">Apellido Representante:</label>
+            <input type="text" id="apellidoRepresentante"  name="apellidoRepresentante" maxlength="20"  placeholder="Apellido del Representante"  formControlName="apellidoRepresentante"  class="form-control"  tabindex="17" [class.is-invalid]="apellidoRinvalido" />
+            <div id="ciudadNacimientod" *ngIf="apellidoRinvalido" class="text-danger">Se requiere el Apellido del Representante</div>
+        
+            <label id="lbl1" for="cedulaRepresentante">Cedula:</label>
+            <input type="text" id="cedulaRepresentante"  name="cedulaRepresentante" maxlength="20"  placeholder="Cedula del Representante"  formControlName="cedulaRepresentante"  class="form-control"  tabindex="17" [class.is-invalid]="cedulaRinvalido" />
+            <div id="ciudadNacimientod" *ngIf="cedulaRinvalido" class="text-danger">Se requiere la Cedula del Representante</div>
+        
+            <br><div id="centrob">                   
+              <button type="submit" class="btn btn-primary" [disabled]="!formGroup.valid">Registrar</button>                  
+             </div>
+          </fieldset>    
+
+        </div>
+        </form>
+        </div>
+</html>

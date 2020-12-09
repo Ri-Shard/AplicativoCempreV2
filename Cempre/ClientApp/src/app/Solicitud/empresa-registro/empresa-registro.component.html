@@ -3,25 +3,23 @@
     <head>
         <meta charset="utf-8" />
         <title style="margin-top: auto;">Registro</title>
-        <script src="assets/js/app.js"></script> 
-    </head>
-    <body>    
+      </head>
+      <body>    
         <div class="container">
             <div class="wrapper">
           <ul class="steps">
               <li class="is-active">Paso 1</li>
-            <li>Paso 2</li>
-            <li>Paso 3</li>
-
           </ul>
 
- 
           <form class="form-wrapper" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
             <fieldset class="section is-active" >
               <h3>Informacion Basica </h3>
 
+              <div class="col-sm-4 text-right" style="max-width:100% ">
+                <button class="btn btn-danger "  [routerLink]="[ '/gestion'] ">Atras</button>
+            </div>
               <label id="lbl1"for="razonsocial">Razon Social:</label>
-              <input  type="text" id="razonSocial"  name="razonSocial" maxlength="20"  placeholder="Ingrese Razon Social"  formControlName="razonSocial"  class="form-control"  tabindex="17" [class.is-invalid]="razoninvalido" />
+              <input  type="text" id="razonSocial"  name="razonSocial"  placeholder="Ingrese Razon Social"  formControlName="razonSocial"  class="form-control"  tabindex="17" [class.is-invalid]="razoninvalido" />
               <div *ngIf="razoninvalido" class="text-danger">Se requiere la Razon Social</div>
 
               <label id="lbl1"for="nit">NIT:</label>
@@ -45,14 +43,13 @@
                 </option>
             </select>                
             <div *ngIf="deptoinvalido" id="sexd"class="text-danger">Seleccione uno</div>    <br>
-            <div class="button" >Next</div>
 
             <br><label id="lbl1" for="ciudad">Ciudad:</label>
             <input type="text" id="ciudad"  name="ciudad" maxlength="20"  placeholder="Ciudad"  formControlName="ciudad"  class="form-control"  tabindex="17" [class.is-invalid]="ciudadinvalido" />
             <div id="ciudadNacimientod" *ngIf="ciudadinvalido" class="text-danger">Se requiere la ciudad de nacimiento</div>
 
             <br><label id="lbl1" for="direccion">Direccion:</label>
-            <input type="text" id="direccion"  name="direccion" maxlength="20"  placeholder="Cireccion"  formControlName="direccion"  class="form-control"  tabindex="17" [class.is-invalid]="direccioninvalido" />
+            <input type="text" id="direccion"  name="direccion" maxlength="40"  placeholder="Cireccion"  formControlName="direccion"  class="form-control"  tabindex="17" [class.is-invalid]="direccioninvalido" />
             <div id="ciudadNacimientod" *ngIf="direccioninvalido" class="text-danger">Se requiere la direccion</div> <br><br>
         
             <label id="lbl1" for="sector">Sector Empresa:</label>
@@ -81,33 +78,11 @@
               <option value="Transporte marítimo, puertos, pesca, transporte interior ">Transporte marítimo, puertos, pesca, transporte interior  </option>
             </select><br>
             <div id="sexod"  *ngIf="sectorinvalido" class="text-danger">Seleccione uno</div>   <br>  
-        </fieldset> 
-        
-        <fieldset class="section">
-            <h3>Descripcion Actividades de la empresa</h3><br>
-            <textarea   name="descripcion" formControlName="descripcion" class="form-control" rows="5" cols="60" placeholder="Escribe una breve descripcion de las actividades de la empresa"></textarea>          
-            <div class="button">Next</div>
-        </fieldset>
-
-                    <fieldset class="section ">
-                     <h3> Informacion Representante </h3>      
-                     
-                     <br><label id="lbl1" for="nombreRepresentante">Nombre Representante:</label>
-                     <input type="text" id="nombreRepresentante"  name="nombreRepresentante" maxlength="20"  placeholder="Nombre del Representante"  formControlName="nombreRepresentante"  class="form-control"  tabindex="17" [class.is-invalid]="nombreRinvalido" />
-                     <div id="ciudadNacimientod" *ngIf="nombreRinvalido" class="text-danger">Se requiere el Nombre del Representante</div>
-
-                     <label id="lbl1" for="apellidoRepresentante">Apellido Representante:</label>
-                     <input type="text" id="apellidoRepresentante"  name="apellidoRepresentante" maxlength="20"  placeholder="Apellido del Representante"  formControlName="apellidoRepresentante"  class="form-control"  tabindex="17" [class.is-invalid]="apellidoRinvalido" />
-                     <div id="ciudadNacimientod" *ngIf="apellidoRinvalido" class="text-danger">Se requiere el Apellido del Representante</div>
-
-                     <label id="lbl1" for="cedulaRepresentante">Cedula:</label>
-                     <input type="text" id="cedulaRepresentante"  name="cedulaRepresentante" maxlength="20"  placeholder="Cedula del Representante"  formControlName="cedulaRepresentante"  class="form-control"  tabindex="17" [class.is-invalid]="cedulaRinvalido" />
-                     <div id="ciudadNacimientod" *ngIf="cedulaRinvalido" class="text-danger">Se requiere la Cedula del Representante</div>
-
-                     <br><div id="centrob">                   
-                       <button type="submit" class="btn btn-primary" [disabled]="!formGroup.valid" [routerLink]="[ '/empresaPerfil']" >Registrar</button>                  
-                      </div>
-                   </fieldset>
+            <br><div id="centrob" >                   
+              <button type="submit" class="btn btn-primary">Validar informacion</button>                  
+            </div>
+            <button  class="btn btn-primary" [disabled]="!formGroup.valid" [routerLink]="[ '/view1']">Siguiente</button>                  
+        </fieldset>                     
           </form> 
         </div>
     </div> 

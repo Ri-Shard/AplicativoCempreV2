@@ -1,45 +1,42 @@
-<!-- Esta vaina se va a quitar si señor-->
+<div class="cards">
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="assets/img/empresa.png" alt="wave" />
+    </div>
+    <div class="card-title">
+      <h2>
+          Registrar Empresa
+          <small>Presione el boton para dirigirlo al formulario</small>
+          <a [routerLink]="['/empresaRegistro']" class="btn">Read more</a>
+      </h2>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="assets/img/estudiante.png" alt="wave">
+    </div>
+    <div class="card-title">
+      <h2>
+          Registrar Estudiante
+          <small>Presione el boton para dirigirlo al formulario</small>
+          <a [routerLink]="['/estudianteRegistro']" class="btn">Read more</a>
+      </h2>
+    </div>
+  </div>
     
-    
-    
-    <div class="container fadeIn animated mt-3" style="max-width: 42cm;" >
-        
-        <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <div class="col-sm-2 " style="max-width:100% ">
-                <h1>Registro</h1>
-                <h5>Seleccione una opcion</h5>
-                <div class="col-sm-4 text-right" style="max-width:100% ">
-                    <button class="btn btn-danger "  [routerLink]="[ '/'] ">Atras</button>
-                </div>
-            </div>
-
-            <hr />
-            <div class="card-columns">
-                <div class="card">
-                    <img class="card-img-top mr-22" src="assets/img/fabrica.png" alt="Card image cap">
-                    <h5 class="card-title">Registrar Empresa</h5>
-                    <div class="card-body">
-                        <button type="button" class="btn btn-outline-primary btn-block" [routerLink]="['/empresaRegistrar']">
-                            Seleccionar
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img class="card-img-top" src="assets/img/estudiante.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Registrar Estudiante</h5>
-                        <button type="button" class="btn btn-outline-primary btn-block" [routerLink]="['/estudianteRegistro']"> 
-                            Seleccionar
-                        </button>
-                    </div>
-                </div>
-
-            </div>
 
 
-            </div>
 
-            </div>
-            </div>
+
+
+
+
+
+  
+
+
+</div>
+
+
+
