@@ -5,8 +5,6 @@
         <title style="margin-top: auto;">Registro</title>
     </head>
     <body>    
-      <script src="assets/js/app.js"></script> 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <div class="container">
             <div class="wrapper">
           <ul class="steps">
@@ -52,83 +50,12 @@
               </select><br>
               <div *ngIf="sexoinvalido" id="sexd"class="text-danger">Seleccione uno</div>    <br>
                
-            <div class="button" >Next</div>
-
-          </fieldset> 
-             <fieldset class="section ">
-              <h3> Informacion Especifica </h3>
-               
-              <label id="lbl1" for="ciudadNacimiento">Ciudad de Nacimiento:</label>
-              <input type="text" id="ciudadNacimiento"  name="ciudadNacimiento" maxlength="20"  placeholder="Ciudad de Nacimiento"  formControlName="ciudadNacimiento"  class="form-control"  tabindex="17" [class.is-invalid]="ciudadNinvalido" />
-              <div id="ciudadNacimientod" *ngIf="ciudadNinvalido" class="text-danger">Se requiere la ciudad de nacimiento</div> <br><br>
-
-              <label id="lbl1"for="eps">EPS:</label>
-              <input type="text" id="eps"  name="eps" maxlength="50"  placeholder="Eps"  formControlName="eps"  class="form-control"  tabindex="17" [class.is-invalid]="epsinvalido" />
-              <div *ngIf="epsinvalido" class="text-danger">Se requiere la EPS del Estudiante</div> 
-
-                <label id="lbl1" for="fechaNacimiento">Fecha de Nacimiento:</label>
-                <input type="date" id="fechaNacimiento"  name="fechaNacimiento" maxlength="20"  placeholder="Fecha de Nacimiento"  formControlName="fechaNacimiento"  class="form-control"  tabindex="17" [class.is-invalid]="fechainvalido" />
-                <div id="fechaNacimientod"*ngIf="fechainvalido" class="text-danger">Se requiere la fecha de nacimiento</div> <br><br>
-
-                <label id="lbl1" for="estadoCivil">Estado Civil:</label>
-                <select id="estadoCivil" name="estadoCivil"  formControlName="estadoCivil"  class="form-control"  tabindex="17" [class.is-invalid]="estadoCinvalido">
-                  <option value="Soltero">Soltero</option> 
-                  <option value="Casado" selected>Casado</option>
-                  <option value="Union Libre">Union Libre</option>
-                </select>
-                <div *ngIf="estadoCinvalido" class="text-danger">Seleccione uno</div>    
-
-              <div class="button">Next</div>
-            </fieldset>
-            <fieldset class="section ">
-              <h3> Informacion Academica </h3>
-              <div class="row cf">
-                <label id="lbl1" for="semestre">Semestre:</label>
-                <select id="semestre"name="semestre" formControlName="semestre"  class="form-control"  tabindex="17" [class.is-invalid]="semestreinvalido">
-                  <option value="5">5</option> 
-                  <option value="6" >6</option>
-                  <option value="7">7  </option>
-                  <option value="8">8  </option>
-                  <option value="9">9  </option>
-                  <option value="10" selected>10  </option>
-                </select><br>
-                <div *ngIf="semestreinvalido" class="text-danger">Seleccione uno</div>   <br>  
-
-<div id="margintop">
-  <label id="" for="invOproyec">Ha realizado investigaciones y proyectos?</label>
-  <label for="si">Si</label>
-  <input type="checkbox" id="si"(click)=" mostrar = true "><br>
-  <textarea *ngIf="mostrar" name="invOproyec" formControlName="invOproyec" class="form-control" rows="5" cols="60" placeholder="Escribe aqui tus investigaciones y proyectos"></textarea>
-  
-                <label id="" for="conocimientoyprac">Tiene conocimiento Previo en Practicas?</label>
-                <label for="si2">Si</label>
-                <input type="checkbox" id="si" (click)=" mostrar2 = true "><br>
-                <textarea *ngIf="mostrar2"  name="conocimientoyprac" formControlName="conocimientoyprac" class="form-control" rows="5" cols="60" placeholder="Donde?"></textarea>
-                
-                <label id="" for="seminarios">Posee Seminarios realizados?</label>
-                <label for="si3">Si</label>
-                <input type="checkbox" id="si" (click)=" mostrar3 = true "><br>
-                <textarea *ngIf="mostrar3"  name="seminarios" formControlName="seminarios" class="form-control" rows="5" cols="60" placeholder="Escribe aqui tus Seminarios Realizados"></textarea>
-                
-                <label id="" for="distinciones">Posee Distinciones Academicas?</label> 
-                <label for="si4">Si</label>
-                <input type="checkbox" id="si" (click)=" mostrar4 = true "><br>
-                <textarea *ngIf="mostrar4"  name="distinciones" formControlName="distinciones" class="form-control" rows="5" cols="60" placeholder="Escribe aqui tus distinciones Recibidas"></textarea>
+              <br><div id="centrob" >                   
+                <button type="submit" class="btn btn-primary">Validar informacion</button>                  
               </div>
+              <button  class="btn btn-primary" [disabled]="!formGroup.valid" [routerLink]="[ '/rview1']">Siguiente</button>                  
+          </fieldset> 
 
-
-                
-                <div class="button" (click)="onSubmit()" >Next</div>
-
-                <!--                 <button class="btn btn-primary"  (click)="onSubmit()" [disabled]="!formGroup.valid">Registrar</button>
- -->
- <div id="centrob">
-   
-   <button type="submit" class="btn btn-primary" [disabled]="!formGroup.valid">Registrar</button>
-   
-  </div>
-</div>
-          </fieldset>
           <fieldset class="section">
             <h3>Registrado Satisfactoriamente!</h3><br>
             <p>Puede revisar su informacion en el apartado de Perfil</p>

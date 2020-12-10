@@ -13,6 +13,8 @@ import { EstudiantePerfilComponent } from './Solicitud/perfil/estudiante-perfil/
 import { View1Component } from './Solicitud/empresa-registro/views/view1/view1.component';
 import { View2Component } from './Solicitud/empresa-registro/views/view2/view2.component';
 import { View3Component } from './Solicitud/empresa-registro/views/view3/view3.component';
+import { Rview1Component } from './Solicitud/estudiante-registro/views/view1/view1.component';
+import { Rview2Component } from './Solicitud/estudiante-registro/views/view2/view2.component';
 
 const routes: Routes = [
   {
@@ -61,6 +63,14 @@ const routes: Routes = [
     {
         path: 'view3',
         component:View3Component
+      },
+    {
+        path: 'rview1',
+        component:Rview1Component
+      },
+    {
+        path: 'rview2',
+        component:Rview2Component
       },
 ];
 

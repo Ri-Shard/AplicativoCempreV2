@@ -22,6 +22,8 @@ import { EstudiantePerfilComponent } from './Solicitud/perfil/estudiante-perfil/
 import { View1Component } from './Solicitud/empresa-registro/views/view1/view1.component';
 import { View2Component } from './Solicitud/empresa-registro/views/view2/view2.component';
 import { View3Component } from './Solicitud/empresa-registro/views/view3/view3.component';
+import { Rview1Component } from './Solicitud/estudiante-registro/views/view1/view1.component';
+import { Rview2Component } from './Solicitud/estudiante-registro/views/view2/view2.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { View3Component } from './Solicitud/empresa-registro/views/view3/view3.c
     EstudiantePerfilComponent,
     View1Component,
     View2Component,
-    View3Component
+    View3Component,
+    Rview1Component,
+    Rview2Component
   ],
   imports: [
     ReactiveFormsModule,

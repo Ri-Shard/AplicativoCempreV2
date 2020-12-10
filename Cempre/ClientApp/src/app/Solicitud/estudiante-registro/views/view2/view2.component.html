@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title style="margin-top: auto;">Registro</title>
+    </head>
+    <body>    
+        <div class="container">
+            <div class="wrapper">
+          <ul class="steps">
+              <li class="is-active">Paso 3</li>
+
+          </ul>
+
+                    <form class="form-wrapper" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+                        
+                        <fieldset class="section is-active">
+                            <h3> Informacion Academica </h3>
+                            <div class="col-sm-4 text-right" style="max-width:100% ">
+                                <button class="btn btn-danger "  [routerLink]="[ '/rview1'] ">Atras</button>
+                            </div>
+                                            <div>
+                        <div class="row cf">
+                        <label id="lbl1" for="semestre">Semestre:</label>
+                        <select id="semestre"name="semestre" formControlName="semestre"  class="form-control"  tabindex="17" [class.is-invalid]="semestreinvalido">
+                            <option value="5">5</option> 
+                            <option value="6" >6</option>
+                            <option value="7">7  </option>
+                            <option value="8">8  </option>
+                            <option value="9">9  </option>
+                            <option value="10" selected>10  </option>
+                        </select><br>
+                        <div *ngIf="semestreinvalido" class="text-danger">Seleccione uno</div>   <br>  
+
+                        <div id="margintop">
+                    <label id="" for="invOproyec">Ha realizado investigaciones y proyectos?</label>
+                    <label for="si">Si</label>
+                    <input type="checkbox" id="si"(click)=" mostrar = true "><br>
+                    <textarea *ngIf="mostrar" name="invOproyec" formControlName="invOproyec" class="form-control" rows="5" cols="60" placeholder="Escribe aqui tus investigaciones y proyectos"></textarea>
+                    
+                        <label id="" for="conocimientoyprac">Tiene conocimiento Previo en Practicas?</label>
+                        <label for="si2">Si</label>
+                        <input type="checkbox" id="si" (click)=" mostrar2 = true "><br>
+                        <textarea *ngIf="mostrar2"  name="conocimientoyprac" formControlName="conocimientoyprac" class="form-control" rows="5" cols="60" placeholder="Donde?"></textarea>
+                        
+                        <label id="" for="seminarios">Posee Seminarios realizados?</label>
+                        <label for="si3">Si</label>
+                        <input type="checkbox" id="si" (click)=" mostrar3 = true "><br>
+                        <textarea *ngIf="mostrar3"  name="seminarios" formControlName="seminarios" class="form-control" rows="5" cols="60" placeholder="Escribe aqui tus Seminarios Realizados"></textarea>
+                        
+                        <label id="" for="distinciones">Posee Distinciones Academicas?</label> 
+                        <label for="si4">Si</label>
+                        <input type="checkbox" id="si" (click)=" mostrar4 = true "><br>
+                        <textarea *ngIf="mostrar4"  name="distinciones" formControlName="distinciones" class="form-control" rows="5" cols="60" placeholder="Escribe aqui tus distinciones Recibidas"></textarea>
+                        </div>
+                    </div>
+
+                        <br><div id="centrob">                   
+                            <button type="submit" class="btn btn-primary" [disabled]="!formGroup.valid">Registrar</button>                  
+                           </div>
+                    </div>
+                    </fieldset>
+                    </form>
+            </div>
+        </div>
+    </body>
+</html>
