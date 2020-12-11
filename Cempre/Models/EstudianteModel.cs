@@ -35,6 +35,8 @@ namespace Cempre.Models {
        [Required(ErrorMessage = "El correo es Requerido")]
         public string Correo { get; set; }
         public string Estado { get; set; }
+        [Required(ErrorMessage = "La contraseña es Requerida")]
+        public string Password { get; set; }
 
     }
 
@@ -59,6 +61,7 @@ namespace Cempre.Models {
             Semestre = estudiante.Semestre;
             Correo = estudiante.Correo;
             Estado = estudiante.Estado;
+            Password = estudiante.Password;
 
         }
     }

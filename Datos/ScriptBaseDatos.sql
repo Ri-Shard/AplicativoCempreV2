@@ -1,6 +1,23 @@
 CREATE DATABASE [Solicitudes];
 USE  [Solicitudes]
 
+ CREATE TABLE [dbo].[Empresa](
+[Nit] [nvarchar](20) NOT NULL PRIMARY KEY,
+[RazonSocial] [nvarchar](40) NULL,
+[Pais] [nvarchar](15) NULL,
+[Departamento] [nvarchar](10) NULL,
+[Ciudad] [nvarchar](20) NULL,
+[Direccion] [nvarchar](20) NULL,
+[Sector] [nvarchar](100) NULL,
+[Descripcion] [nvarchar](80) NULL,
+[NombreRepresentante] [nvarchar](20) NULL,
+[ApellidoRepresentante] [nvarchar](20) NULL,
+[CedulaRepresentante] [nvarchar](10) NULL,
+[Estado][nvarchar](15) NOT NULL default ('Solicitando'),
+[Password][nvarchar](15) NULL,
+) 
+GO
+
 CREATE TABLE [dbo].[Estudiante](
 [Identificacion] [nvarchar](10) NOT NULL PRIMARY KEY,
 [Nombres] [nvarchar](20) NULL,
@@ -14,29 +31,19 @@ CREATE TABLE [dbo].[Estudiante](
 [Conocimientoyprac] [nvarchar](80) NULL,
 [Seminarios] [nvarchar](80) NULL,
 [Distinciones] [nvarchar](80) NULL,
-
+[Estado][nvarchar](20) NOT NULL default ('Esperando Pago'),
 [Sexo] [nvarchar](2) NULL,
 [Semestre] [nvarchar] (2) NULL,
 [Correo] [nvarchar](30) NULL,
-) 
-GO
-CREATE TABLE [dbo].[Empresa](
-[Nit] [nvarchar](20) NOT NULL PRIMARY KEY,
-[RazonSocial] [nvarchar](40) NULL,
-[Pais] [nvarchar](15) NULL,
-[Departamento] [nvarchar](10) NULL,
-[Ciudad] [nvarchar](20) NULL,
-[Direccion] [nvarchar](20) NULL,
-[Sector] [nvarchar](15) NULL,
-[Descripcion] [nvarchar](80) NULL,
-[NombreRepresentante] [nvarchar](20) NULL,
-[ApellidoRepresentante] [nvarchar](20) NULL,
-[CedulaRepresentante] [nvarchar](10) NULL,
-
+[Password][nvarchar](15) NULL,
 ) 
 GO
 
-COMMIT
+ 
+drop table Empresa;
+drop table Estudiante;
+drop table Empresa;
+drop table Estudiante;
 CREATE DATABASE paises_estados_del_mundo;
 
 USE paises_estados_del_mundo;

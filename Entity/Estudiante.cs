@@ -21,7 +21,7 @@ namespace Entity
         public string Semestre { get; set; }
         public string Correo { get; set; }
         public string Estado { get; set; }
-
+        public string Password { get; set; }
 
     }
 }

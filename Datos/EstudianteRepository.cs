@@ -19,8 +19,8 @@ namespace Datos
         {
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"Insert Into Estudiante (Identificacion,Nombres,Apellido,FechaNacimiento,CiudadNacimiento,EstadoCivil,Telefono,Eps,InvOproyec,Conocimientoyprac,Seminarios,Distinciones   ,Sexo,Semestre,Correo) 
-                                        values (@Identificacion,@Nombres,@Apellido,@FechaNacimiento,@CiudadNacimiento,@EstadoCivil,@Telefono,@Eps,@InvOproyec,@Conocimientoyprac,@Seminarios,@Distinciones,@Sexo,@Semestre,@Correo)";
+                command.CommandText = @"Insert Into Estudiante (Identificacion,Nombres,Apellido,FechaNacimiento,CiudadNacimiento,EstadoCivil,Telefono,Eps,InvOproyec,Password,Conocimientoyprac,Seminarios,Distinciones   ,Sexo,Semestre,Correo) 
+                                        values (@Identificacion,@Nombres,@Apellido,@FechaNacimiento,@CiudadNacimiento,@EstadoCivil,@Telefono,@Eps,@InvOproyec,@Password,@Conocimientoyprac,@Seminarios,@Distinciones,@Sexo,@Semestre,@Correo)";
                 command.Parameters.AddWithValue("@Identificacion", estudiante.Identificacion);
                 command.Parameters.AddWithValue("@Nombres", estudiante.Nombres);
                 command.Parameters.AddWithValue("@Apellido", estudiante.Apellido);
@@ -36,6 +36,7 @@ namespace Datos
                 command.Parameters.AddWithValue("@Sexo", estudiante.Sexo);
                 command.Parameters.AddWithValue("@Semestre", estudiante.Semestre);
                 command.Parameters.AddWithValue("@Correo", estudiante.Correo);
+                command.Parameters.AddWithValue("@Password", estudiante.Password);
                 var filas = command.ExecuteNonQuery();
             }
         }    
@@ -70,6 +71,7 @@ namespace Datos
                 return DataReaderMapToPerson(dataReader);
             }
         }
+
         private Estudiante DataReaderMapToPerson(SqlDataReader dataReader)
         {
             if(!dataReader.HasRows) return null;
@@ -90,6 +92,7 @@ namespace Datos
             estudiante.Semestre = (string)dataReader["Semestre"];
             estudiante.Correo = (string)dataReader["Correo"];
             estudiante.Estado = (string)dataReader["Estado"];
+            estudiante.Password = (string)dataReader["Password"];
             return estudiante;
         }
     }

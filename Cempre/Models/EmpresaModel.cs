@@ -31,6 +31,8 @@ namespace Cempre.Models {
        [Required(ErrorMessage = "La Cedula del Representante es Requerida")]
         public string CedulaRepresentante { get; set; }
         public string Estado { get; set; }
+       [Required(ErrorMessage = "La Contraseña es Requerida")]
+        public string Password { get; set; }
 
     }
     public class EmpresaViewModel : EmpresaInputModel {
@@ -50,6 +52,7 @@ namespace Cempre.Models {
             ApellidoRepresentante = empresa.ApellidoRepresentante;
             CedulaRepresentante = empresa.CedulaRepresentante;
             Estado = empresa.Estado;
+            Password = empresa.Password;
 
         }
     }

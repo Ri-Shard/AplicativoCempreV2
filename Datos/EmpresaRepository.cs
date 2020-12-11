@@ -19,8 +19,8 @@ namespace Datos
         {
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"Insert Into Empresa (RazonSocial,Nit,Pais,Departamento,Ciudad,Direccion,Sector,Descripcion,NombreRepresentante,ApellidoRepresentante,CedulaRepresentante) 
-                                        values (@RazonSocial,@Nit,@Pais,@Departamento,@Ciudad,@Direccion,@Sector,@Descripcion,@NombreRepresentante,@ApellidoRepresentante,@CedulaRepresentante)";
+                command.CommandText = @"Insert Into Empresa (RazonSocial,Nit,Pais,Departamento,Ciudad,Direccion,Sector,Descripcion,NombreRepresentante,ApellidoRepresentante,CedulaRepresentante,Password) 
+                                        values (@RazonSocial,@Nit,@Pais,@Departamento,@Ciudad,@Direccion,@Sector,@Descripcion,@NombreRepresentante,@ApellidoRepresentante,@CedulaRepresentante,@Password)";
                 command.Parameters.AddWithValue("@RazonSocial", empresa.RazonSocial);
                 command.Parameters.AddWithValue("@Nit", empresa.Nit);
                 command.Parameters.AddWithValue("@Pais", empresa.Pais);
@@ -32,6 +32,7 @@ namespace Datos
                 command.Parameters.AddWithValue("@NombreRepresentante", empresa.NombreRepresentante);
                 command.Parameters.AddWithValue("@ApellidoRepresentante", empresa.ApellidoRepresentante);
                 command.Parameters.AddWithValue("@CedulaRepresentante", empresa.CedulaRepresentante);
+                command.Parameters.AddWithValue("@Password", empresa.Password);
                 var filas = command.ExecuteNonQuery();
             }
         }    
@@ -82,6 +83,7 @@ namespace Datos
             empresa.ApellidoRepresentante = (string)dataReader["ApellidoRepresentante"];
             empresa.CedulaRepresentante = (string)dataReader["CedulaRepresentante"];
             empresa.Estado = (string)dataReader["Estado"];
+            empresa.Password = (string)dataReader["Password"];
 
             return empresa;
         }
