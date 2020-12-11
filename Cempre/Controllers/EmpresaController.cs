@@ -58,7 +58,7 @@ namespace Cempre.Controllers
             NombreRepresentante = empresaInput.NombreRepresentante,
             ApellidoRepresentante = empresaInput.ApellidoRepresentante,
             CedulaRepresentante = empresaInput.CedulaRepresentante,
-            Estado = empresaInput.Estado
+            Estado = empresaInput.Estado,
             Password = empresaInput.Password
             };
             return empresa; 
