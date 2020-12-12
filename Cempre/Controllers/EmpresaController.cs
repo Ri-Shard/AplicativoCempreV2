@@ -5,6 +5,7 @@ using Logica;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Cempre.Models;
+using Datos;
 
 namespace Cempre.Controllers
 {
@@ -14,13 +15,10 @@ namespace Cempre.Controllers
 
     public class EmpresaController : ControllerBase
     {
-         private readonly EmpresaService _empresaService;
-        public IConfiguration Configuration { get; }
-        public EmpresaController(IConfiguration configuration)
+       private readonly EmpresaService _empresaService;
+        public EmpresaController(SolicitudContext context)
         {
-            Configuration = configuration;
-            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
-            _empresaService = new EmpresaService(connectionString);
+            _empresaService = new EmpresaService(context);
         }
 
         // GET: api/Empresa

@@ -5,7 +5,7 @@ using Logica;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Cempre.Models;
-
+using Datos;
 namespace Cempre.Controllers
 {
 
@@ -14,13 +14,10 @@ namespace Cempre.Controllers
 
     public class DeptoController : ControllerBase
     {
-         private readonly DeptoService _deptoService;
-        public IConfiguration Configuration { get; }
-        public DeptoController(IConfiguration configuration)
+       private readonly DeptoService _deptoService;
+        public DeptoController(SolicitudContext context)
         {
-            Configuration = configuration;
-            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
-            _deptoService = new DeptoService(connectionString);
+            _deptoService = new DeptoService(context);
         }
 
         // GET: api/Empresa

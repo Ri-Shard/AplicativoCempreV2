@@ -5,7 +5,7 @@ using Logica;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Cempre.Models;
-
+using Datos;
 namespace Cempre.Controllers
 {
 
@@ -14,15 +14,11 @@ namespace Cempre.Controllers
 
     public class PaisController : ControllerBase
     {
-         private readonly PaisService _paisService;
-        public IConfiguration Configuration { get; }
-        public PaisController(IConfiguration configuration)
+       private readonly PaisService _paisService;
+        public PaisController(SolicitudContext context)
         {
-            Configuration = configuration;
-            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
-            _paisService = new PaisService(connectionString);
+            _paisService = new PaisService(context);
         }
-
         // GET: api/Empresa
         [HttpGet]
         public IEnumerable<PaisViewModel> Gets()

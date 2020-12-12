@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Entity
 {
@@ -6,6 +7,7 @@ namespace Entity
 
     {
         public string RazonSocial { get; set; }
+        [Key]
         public string Nit { get; set; }
         public string Pais { get; set; }
         public string Departamento { get; set; }

@@ -5,7 +5,7 @@ using Logica;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Cempre.Models;
-
+using Datos;
 namespace Cempre.Controllers
 {
 
@@ -14,13 +14,10 @@ namespace Cempre.Controllers
 
     public class EstudianteController : ControllerBase
     {
-         private readonly EstudianteService _estudianteService;
-        public IConfiguration Configuration { get; }
-        public EstudianteController(IConfiguration configuration)
+       private readonly EstudianteService _estudianteService;
+        public EstudianteController(SolicitudContext context)
         {
-            Configuration = configuration;
-            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
-            _estudianteService = new EstudianteService(connectionString);
+            _estudianteService = new EstudianteService(context);
         }
 
         // GET: api/Estudiante

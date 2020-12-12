@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using Datos;
 using Entity;
@@ -7,18 +8,16 @@ namespace Logica
 {
     public class PaisService
     {
-         private readonly ConnectionManager _conexion;
-        private readonly PaisRepository _repositorio;
-        public PaisService (string connectionString) {
-            _conexion = new ConnectionManager (connectionString);
-            _repositorio = new PaisRepository (_conexion);
-        } 
+        private readonly SolicitudContext _context;
+      
+        public PaisService(SolicitudContext context)
+        {
+            _context=context;
+        }
 
          public List<Pais> ConsultarTodos()
         {
-            _conexion.Open();
-            List<Pais> paises = _repositorio.ConsultarTodos();
-            _conexion.Close();
+            List<Pais> paises = _context.Pais.ToList();
             return paises;
         }
 
