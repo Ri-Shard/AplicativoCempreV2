@@ -11,6 +11,7 @@ import { Estudiante } from '../../models/estudiante';
 export class EstudiantePerfilComponent implements OnInit {
   estudiantes:Estudiante[];
   estudiante:Estudiante;
+  mostrar= true;
   constructor(private estudianteService: EstudianteService,private route: ActivatedRoute ) { }
 
   ngOnInit() {
@@ -20,6 +21,11 @@ export class EstudiantePerfilComponent implements OnInit {
         this.estudiante = result;
       });  
 
+      if(this.estudiante.estado != 'Esperando Pago'){
+        this.mostrar=false
+      }else{
+        this.mostrar
+      }
  
    }
 
