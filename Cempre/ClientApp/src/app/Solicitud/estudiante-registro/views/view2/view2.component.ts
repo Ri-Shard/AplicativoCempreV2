@@ -33,6 +33,8 @@ export class Rview2Component implements OnInit {
        conocimientoyprac: ['',],
        seminarios: ['',],
        distinciones: ['',], 
+      password: ['',Validators.required], 
+      estado: ['Esperando Pago'] 
     }); 
     }
 
@@ -89,6 +91,9 @@ export class Rview2Component implements OnInit {
     }
     get semestreinvalido() {
       return this.formGroup.get('semestre').invalid && this.formGroup.get('semestre').touched;
+    }
+    get passwordinvalido() {
+      return this.formGroup.get('password').invalid && this.formGroup.get('password').touched;
     }
 
 }

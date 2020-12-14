@@ -13,4 +13,5 @@
                 apellidoRepresentante:string;
                 cedulaRepresentante:string;       
                 estado:string;       
+                password:string;       
             }

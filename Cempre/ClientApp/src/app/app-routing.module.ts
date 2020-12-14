@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import {EstudianteConsultaComponent} from './Solicitud/estudiante-consulta/estudiante-consulta.component';
 import {EstudianteRegistroComponent} from './Solicitud/estudiante-registro/estudiante-registro.component';
 import { RegistrarComponent } from './Gestion/registrar/registrar.component';
-import { LoginComponent } from './Login/login/login.component';
 import { RegisterComponent } from './Login/register/register.component';
 import { EmpresaConsultaComponent } from './Solicitud/empresa-consulta/empresa-consulta.component';
 import { EmpresaRegistroComponent } from './Solicitud/empresa-registro/empresa-registro.component';
@@ -47,10 +46,6 @@ const routes: Routes = [
     {
         path: 'loginRegistro',
         component:RegisterComponent
-      },
-    {
-        path: 'login',
-        component:LoginComponent
       },
     {
         path: 'view1',

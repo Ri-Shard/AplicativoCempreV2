@@ -121,6 +121,10 @@
     position: absolute;
     left:50px;
 }
+#lbl2{
+    position: absolute;
+    left:50px;
+}
 #sexo,#estadoCivil,#semestre{
     position: absolute;
     left:200px;
@@ -134,12 +138,21 @@
     margin-left:auto;
      margin-right:auto;
     }
+#centroc{
+    margin-left:auto;
+     margin-right:auto;
+     margin-top:80px;
+    }
 #fechaNacimiento,#ciudadNacimiento{
     position: absolute;
     left:250px;
     width : 200px;
 }
 #sexd,#fechaNacimientod,#ciudadNacimientod{
+    position: absolute;
+    left:400px;
+}
+#w{
     position: absolute;
     left:400px;
 }

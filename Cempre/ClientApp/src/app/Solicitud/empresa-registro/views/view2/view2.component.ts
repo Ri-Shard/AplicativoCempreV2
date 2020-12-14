@@ -32,6 +32,7 @@ export class View2Component implements OnInit {
         this.empresa.nombreRepresentante = this.formGroup.value.nombreRepresentante;
         this.empresa.apellidoRepresentante = this.formGroup.value.apellidoRepresentante;
         this.empresa.cedulaRepresentante = this.formGroup.value.cedulaRepresentante;
+        this.empresa.password = this.formGroup.value.password;
         console.warn(this.empresa);
         this._empresaService.post(this.empresa).subscribe(p => {
           if (p != null) {
@@ -47,6 +48,8 @@ export class View2Component implements OnInit {
           nombreRepresentante: ['', Validators.required],
           apellidoRepresentante: ['', Validators.required],
           cedulaRepresentante: ['', Validators.required],  
+          password: ['', Validators.required],
+          estado:['Solicitando']  
         }); 
         }
       get nombreRinvalido() {
@@ -58,7 +61,10 @@ export class View2Component implements OnInit {
       get cedulaRinvalido() {
         return this.formGroup.get('cedulaRepresentante').invalid && this.formGroup.get('cedulaRepresentante').touched;
       }
-  
+      get passwordinvalido() {
+        return this.formGroup.get('password').invalid && this.formGroup.get('password').touched;
+      }
+      
   }
   
 

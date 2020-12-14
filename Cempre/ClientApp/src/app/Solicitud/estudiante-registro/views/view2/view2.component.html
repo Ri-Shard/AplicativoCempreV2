@@ -33,25 +33,31 @@
                         <div *ngIf="semestreinvalido" class="text-danger">Seleccione uno</div>   <br>  
 
                         <div id="margintop">
-                    <label id="" for="invOproyec">Ha realizado investigaciones y proyectos?</label>
-                    <label for="si">Si</label>
-                    <input type="checkbox" id="si"(click)=" mostrar = true "><br>
-                    <textarea *ngIf="mostrar" name="invOproyec" formControlName="invOproyec" class="form-control" rows="5" cols="60" placeholder="Escribe aqui tus investigaciones y proyectos"></textarea>
+                        <label id="lbl2" for="invOproyec">Ha realizado investigaciones y proyectos?</label>
+                        <label for="si">Si</label>
+                        <input id="w"type="checkbox" id="si"(click)=" mostrar = true "><br>
+                        <textarea *ngIf="mostrar" name="invOproyec" formControlName="invOproyec" class="form-control" rows="5" cols="60" placeholder="Escribe aqui tus investigaciones y proyectos"></textarea>
                     
-                        <label id="" for="conocimientoyprac">Tiene conocimiento Previo en Practicas?</label>
+                        <label id="lbl2" for="conocimientoyprac">Tiene conocimiento Previo en Practicas?</label>
                         <label for="si2">Si</label>
-                        <input type="checkbox" id="si" (click)=" mostrar2 = true "><br>
+                        <input id="w" type="checkbox" id="si" (click)=" mostrar2 = true "><br>
                         <textarea *ngIf="mostrar2"  name="conocimientoyprac" formControlName="conocimientoyprac" class="form-control" rows="5" cols="60" placeholder="Donde?"></textarea>
                         
-                        <label id="" for="seminarios">Posee Seminarios realizados?</label>
+                        <label id="lbl2" for="seminarios">Posee Seminarios realizados?</label>
                         <label for="si3">Si</label>
-                        <input type="checkbox" id="si" (click)=" mostrar3 = true "><br>
+                        <input id="w"type="checkbox" id="si" (click)=" mostrar3 = true "><br>
                         <textarea *ngIf="mostrar3"  name="seminarios" formControlName="seminarios" class="form-control" rows="5" cols="60" placeholder="Escribe aqui tus Seminarios Realizados"></textarea>
                         
-                        <label id="" for="distinciones">Posee Distinciones Academicas?</label> 
+                        <label id="lbl2" for="distinciones">Posee Distinciones Academicas?</label> 
                         <label for="si4">Si</label>
-                        <input type="checkbox" id="si" (click)=" mostrar4 = true "><br>
+                        <input id="w"type="checkbox" id="si" (click)=" mostrar4 = true "><br>
                         <textarea *ngIf="mostrar4"  name="distinciones" formControlName="distinciones" class="form-control" rows="5" cols="60" placeholder="Escribe aqui tus distinciones Recibidas"></textarea>
+                        </div>
+                        <div id=centroc>
+                            <h6> Ahora, es importante definir una contraseña para el acceso </h6>   <br>   
+                            
+                            <input type="password" id="contraseña"  name="password" minlength="6"  placeholder="Contraseña"  formControlName="password"  class="form-control"  tabindex="17" [class.is-invalid]="passwordinvalido" />
+                            <div id="ciudadNacimientod" *ngIf="passwordinvalido" class="text-danger">Se requiere la Contraseña Para futuros ingresos</div>
                         </div>
                     </div>
 

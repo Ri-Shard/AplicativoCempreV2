@@ -13,7 +13,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { EstudianteService } from './services/estudiante.service';
 import { RegistrarComponent } from './Gestion/registrar/registrar.component';
 import { FooterComponent } from './footer/footer.component';
-import { LoginComponent } from './Login/login/login.component';
 import { RegisterComponent } from './Login/register/register.component';
 import { EmpresaRegistroComponent } from './Solicitud/empresa-registro/empresa-registro.component';
 import { EmpresaConsultaComponent } from './Solicitud/empresa-consulta/empresa-consulta.component';
@@ -34,7 +33,6 @@ import { Rview2Component } from './Solicitud/estudiante-registro/views/view2/vie
     EstudianteRegistroComponent,
     RegistrarComponent,
     FooterComponent,
-    LoginComponent,
     RegisterComponent,
     EmpresaRegistroComponent,
     EmpresaConsultaComponent,
