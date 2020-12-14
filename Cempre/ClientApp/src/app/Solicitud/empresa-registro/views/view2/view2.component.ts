@@ -37,7 +37,6 @@ export class View2Component implements OnInit {
         this._empresaService.post(this.empresa).subscribe(p => {
           if (p != null) {
             this.empresa = p;
-            localStorage.clear();
           } else {
              alert('ERROR REVISE LOS CAMPOS!');
           }

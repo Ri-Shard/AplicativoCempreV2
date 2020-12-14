@@ -21,10 +21,6 @@ import { HandleHttpErrorService } from '../@base/handle-http-error.service';
   
     get(): Observable<Pais[]> {
       return this.http.get<Pais[]>(this.baseUrl + 'api/Pais')
-          .pipe(
-              tap(_ => this.handleErrorService.log('datos pais recibidos')),
-              catchError(this.handleErrorService.handleError<Pais[]>('Consulta Pais', null))
-          );
     }
 
   

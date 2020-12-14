@@ -62,8 +62,12 @@
                     </div>
 
                         <br><div id="centrob">                   
-                            <button type="submit" class="btn btn-primary" [disabled]="!formGroup.valid">Registrar</button>                  
+                            <button type="submit" class="btn btn-primary" (click)="mostrar=true" [disabled]="!formGroup.valid">Registrar</button>                  
                            </div>
+                    </div>
+
+                    <div *ngIf="mostrar" class="col-sm-4 text-right" style="max-width:100% ">
+                        <button class="btn btn-danger "  [routerLink]="['/estudiantePerfil',estudiante.identificacion]">Revisar Perfil</button>
                     </div>
                     </fieldset>
                     </form>

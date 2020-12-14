@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl, FormControl } from '@angular/forms';
 import { EstudianteService } from 'src/app/services/estudiante.service';
 import { Estudiante } from 'src/app/Solicitud/models/estudiante';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-view2',
@@ -10,7 +11,8 @@ import { Estudiante } from 'src/app/Solicitud/models/estudiante';
 })
 export class Rview2Component implements OnInit {
 
-  constructor(private _estudianteService: EstudianteService,  private formBuilder: FormBuilder) {}
+  constructor(private _estudianteService: EstudianteService,    private location: Location
+    ,  private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.buildForm();
@@ -69,11 +71,11 @@ export class Rview2Component implements OnInit {
        this._estudianteService.post(this.estudiante).subscribe(p => {
         if (p != null) {
           this.estudiante = p;
-          localStorage.clear();
         } else {
            alert('ERROR REVISE LOS CAMPOS!');
         }
       });
+
     }
 
     //mensajes validaciones

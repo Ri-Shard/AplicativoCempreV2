@@ -29,16 +29,13 @@ const httpOptionsPut = {
   
     get(): Observable<Empresa[]> {
       return this.http.get<Empresa[]>(this.baseUrl + 'api/Empresa')
-          .pipe(
-              tap(_ => this.handleErrorService.log('datos recibidos')),
-              catchError(this.handleErrorService.handleError<Empresa[]>('Consulta Empresa', null))
-          );
+
     }
   
     post(empresa: Empresa): Observable<Empresa> {
       return this.http.post<Empresa>(this.baseUrl + 'api/Empresa', empresa)
           .pipe(
-              tap(_ => this.handleErrorService.log('datos enviados')),
+              tap(_ => this.handleErrorService.log('Registro Realizado satisfactoriamente')),
               catchError(this.handleErrorService.handleError<Empresa>('Registrar empresa', null))
           );
   

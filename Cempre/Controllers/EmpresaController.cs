@@ -1,15 +1,18 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Entity;
 using Logica;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Cempre.Models;
 using Datos;
+using System.ComponentModel.DataAnnotations;
 
 namespace Cempre.Controllers
 {
-
     [Route("api/[controller]")]
     [ApiController]
 
@@ -19,6 +22,7 @@ namespace Cempre.Controllers
         public EmpresaController(SolicitudContext context)
         {
             _empresaService = new EmpresaService(context);
+            
         }
 
         // GET: api/Empresa
@@ -36,8 +40,13 @@ namespace Cempre.Controllers
             var response = _empresaService.Guardar(empresa);
             if (response.Error) 
             {
-                return BadRequest(response.Mensaje);
-            }
+                ModelState.AddModelError("Guardar Empresa", response.Mensaje);
+                var problemDetails = new ValidationProblemDetails(ModelState)
+                {
+                    Status = StatusCodes.Status400BadRequest,
+                };
+                return BadRequest(problemDetails);          
+             }
             return Ok(response.Empresa);
         }
 

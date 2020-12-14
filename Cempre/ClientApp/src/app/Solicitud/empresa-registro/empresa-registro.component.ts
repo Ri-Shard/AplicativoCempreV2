@@ -22,6 +22,7 @@ export class EmpresaRegistroComponent implements OnInit {
 
   ngOnInit() {
     this.buildForm();
+    localStorage.clear();
     this._paisService.get().subscribe(result =>{
       this.paises = result;
     }); 
@@ -46,14 +47,7 @@ export class EmpresaRegistroComponent implements OnInit {
     add() {
       this.empresa = this.formGroup.value;
       localStorage.setItem('datos', JSON.stringify(this.empresa));
-/*       this._empresaService.post(this.empresa).subscribe(p => {
-        if (p != null) {
-          this.empresa = p;
-         alert('Empresa Registrada Satisfactoriamente!');
-        } else {
-           alert('ERROR REVISE LOS CAMPOS!');
-        }
-      }); */
+
     }
     buildForm() {
       this.formGroup = this.formBuilder.group({

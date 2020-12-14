@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EstudiantePerfilComponent } from './estudiante-perfil.component';
+import { AlertModalComponent } from './alert-modal.component';
 
-describe('EstudiantePerfilComponent', () => {
-  let component: EstudiantePerfilComponent;
-  let fixture: ComponentFixture<EstudiantePerfilComponent>;
+describe('AlertModalComponent', () => {
+  let component: AlertModalComponent;
+  let fixture: ComponentFixture<AlertModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EstudiantePerfilComponent ]
+      declarations: [ AlertModalComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EstudiantePerfilComponent);
+    fixture = TestBed.createComponent(AlertModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

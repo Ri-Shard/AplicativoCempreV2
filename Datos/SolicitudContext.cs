@@ -14,5 +14,6 @@ namespace Datos
         public DbSet<Depto> Depto { get; set; }
         public DbSet<Solicitud> Solicitud { get; set; }
 
+
 	}
 }

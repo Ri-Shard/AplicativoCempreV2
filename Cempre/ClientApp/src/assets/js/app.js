@@ -1,5 +1,4 @@
 $(function(){
-  $('#myTable').DataTable();
 });
 
 

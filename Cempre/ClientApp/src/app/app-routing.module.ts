@@ -14,6 +14,7 @@ import { View2Component } from './Solicitud/empresa-registro/views/view2/view2.c
 import { View3Component } from './Solicitud/empresa-registro/views/view3/view3.component';
 import { Rview1Component } from './Solicitud/estudiante-registro/views/view1/view1.component';
 import { Rview2Component } from './Solicitud/estudiante-registro/views/view2/view2.component';
+import { LoginComponent } from './Login/login/login.component';
 
 const routes: Routes = [
   {
@@ -36,16 +37,20 @@ const routes: Routes = [
       component:RegistrarComponent
     },
   {
-      path: 'empresaPerfil',
+      path: 'empresaPerfil/:id',
       component:EmpresaPerfilComponent
     },
   {
-      path: 'estudiantePerfil',
+      path: 'estudiantePerfil/:id',
       component:EstudiantePerfilComponent
     },
     {
         path: 'loginRegistro',
         component:RegisterComponent
+      },
+    {
+        path: 'login',
+        component:LoginComponent
       },
     {
         path: 'view1',

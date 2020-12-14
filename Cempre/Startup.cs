@@ -86,6 +86,7 @@ namespace Cempre
             }
 
             app.UseRouting();
+            
 
             app.UseEndpoints(endpoints =>
             {

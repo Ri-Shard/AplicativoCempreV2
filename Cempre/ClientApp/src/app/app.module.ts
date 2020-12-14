@@ -23,6 +23,8 @@ import { View2Component } from './Solicitud/empresa-registro/views/view2/view2.c
 import { View3Component } from './Solicitud/empresa-registro/views/view3/view3.component';
 import { Rview1Component } from './Solicitud/estudiante-registro/views/view1/view1.component';
 import { Rview2Component } from './Solicitud/estudiante-registro/views/view2/view2.component';
+import { LoginComponent } from './Login/login/login.component';
+import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { Rview2Component } from './Solicitud/estudiante-registro/views/view2/vie
     RegistrarComponent,
     FooterComponent,
     RegisterComponent,
+    LoginComponent,
     EmpresaRegistroComponent,
     EmpresaConsultaComponent,
     EmpresaPerfilComponent,
@@ -42,7 +45,8 @@ import { Rview2Component } from './Solicitud/estudiante-registro/views/view2/vie
     View2Component,
     View3Component,
     Rview1Component,
-    Rview2Component
+    Rview2Component,
+    AlertModalComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -55,6 +59,7 @@ import { Rview2Component } from './Solicitud/estudiante-registro/views/view2/vie
     ]),
     AppRoutingModule
   ],
+  entryComponents:[AlertModalComponent],
   providers: [EstudianteService],
   bootstrap: [AppComponent]
 })

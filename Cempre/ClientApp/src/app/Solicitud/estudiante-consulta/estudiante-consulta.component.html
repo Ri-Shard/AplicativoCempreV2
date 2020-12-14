@@ -14,6 +14,7 @@
             <th scope="col">semestre</th>
             <th scope="col">Correo</th>
             <th scope="col">Estado</th>
+            <th scope="col">Opciones</th>
           </tr>
         </thead>
         <tbody>
@@ -26,9 +27,33 @@
             <td>{{estudiante.semestre}}</td>
             <td>{{estudiante.correo}}</td>
             <td>{{estudiante.estado}}</td>
+            <td>
+              <button class="btn btn-info mr-1"
+               [routerLink]="['/estudiantePerfil',estudiante.identificacion]">
+               <i class="fa fa-pen"></i>
+             </button>
+            </td>
            </tr>
 
         </tbody>
       </table>
-
+      
+      
+    <div *ngIf="!cargando && estudiantes.length === 0"
+    class="alert alert-warning text-center mt-3 animated fadeIn faster">
+    <h4 class="alert-heading">No hay registros</h4>
+    <p>
+    <i class="fa fa-exclamation fa-2x"></i>
+    </p>
+    </div>
+      <div *ngIf="cargando" 
+      class="alert alert-info text-center mt-3 animated fadeIn faster">
+   <h4 class="alert-heading">Cargando</h4>
+   <p>
+     <i class="fa fa-sync-alt fa-spin fa-2x"></i>
+   </p>
+   <p class="mb-0">
+     Espere por favor
+   </p>
+ </div>
      

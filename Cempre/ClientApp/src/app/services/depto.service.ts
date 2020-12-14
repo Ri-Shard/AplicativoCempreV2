@@ -21,10 +21,6 @@ import { HandleHttpErrorService } from '../@base/handle-http-error.service';
   
     get(): Observable<Depto[]> {
       return this.http.get<Depto[]>(this.baseUrl + 'api/Depto')
-          .pipe(
-              tap(_ => this.handleErrorService.log('datos depto recibidos')),
-              catchError(this.handleErrorService.handleError<Depto[]>('Consulta Depto', null))
-          );
     }
 
   

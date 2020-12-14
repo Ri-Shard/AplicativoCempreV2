@@ -10,13 +10,14 @@ import { FormGroup, FormBuilder, Validators, AbstractControl, FormControl } from
 })
 export class EstudianteRegistroComponent implements OnInit {
   formGroup: FormGroup;
-  estudiante: Estudiante;
+  estudiante: Estudiante; 
    mostrar = false;
    mostrar2= false;
    mostrar3= false;
    mostrar4= false;
   constructor(private _estudianteService: EstudianteService,  private formBuilder: FormBuilder) {}
   ngOnInit() {
+    localStorage.clear();
     this.buildForm();
   }
   buildForm() {

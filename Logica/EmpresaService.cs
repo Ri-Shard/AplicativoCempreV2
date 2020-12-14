@@ -14,6 +14,7 @@ namespace Logica
         {
             _context=context;
         }
+
         public GuardarEmpresaResponse Guardar(Empresa empresa)
         {
             try
@@ -65,6 +66,6 @@ namespace Logica
               return buscar;      
 
         }
+    }
 
-        }
 }
