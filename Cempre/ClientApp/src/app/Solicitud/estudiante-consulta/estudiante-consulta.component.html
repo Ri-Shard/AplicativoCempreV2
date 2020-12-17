@@ -1,7 +1,7 @@
 
 <h1>
     Estudiantes Registrados
-</h1>
+</h1> 
       <hr>     
     <table id="myTable" class="table table-striped table-bordered"style="width:100%">
         <thead>
@@ -12,26 +12,30 @@
             <th scope="col">Nombre</th>
             <th scope="col">Sexo</th>
             <th scope="col">semestre</th>
-            <th scope="col">Correo</th>
+            <th scope="col">Carrera</th>
             <th scope="col">Estado</th>
             <th scope="col">Opciones</th>
           </tr>
         </thead>
         <tbody>
           
-          <tr *ngFor = "let estudiante of estudiantes; let i=index">
+           <tr *ngFor="let estudiante of estudiantes|filtroxEstado:estado;index as i ">
             <th scope="row">{{i + 1}}</th>
             <td>{{estudiante.identificacion}}</td>
             <td>{{estudiante.nombres}}</td>
             <td>{{estudiante.sexo}}</td>
             <td>{{estudiante.semestre}}</td>
-            <td>{{estudiante.correo}}</td>
+            <td>{{estudiante.carrera}}</td>
             <td>{{estudiante.estado}}</td>
             <td>
               <button class="btn btn-info mr-1"
                [routerLink]="['/estudiantePerfil',estudiante.identificacion]">
                <i class="fa fa-pen"></i>
              </button>
+             <button class="btn btn-info mr-1"
+              (click)="add()">
+             <i class="fa fa-plus"></i>
+           </button>
             </td>
            </tr>
 

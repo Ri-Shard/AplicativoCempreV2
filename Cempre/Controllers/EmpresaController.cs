@@ -49,6 +49,18 @@ namespace Cempre.Controllers
              }
             return Ok(response.Empresa);
         }
+ 
+
+        [HttpGet("{nit}")]
+        public EmpresaViewModel GetEmpresa(string nit)
+        {
+            
+            var empresab =  _empresaService.BuscarEmpresa(nit);
+            EmpresaViewModel empresa = MapearEmpresa2(empresab);
+
+            return empresa;
+        }
+
 
           private Empresa MapearEmpresa(EmpresaInputModel empresaInput)
         {
@@ -70,6 +82,28 @@ namespace Cempre.Controllers
             };
             return empresa; 
         }
+
+        private EmpresaViewModel MapearEmpresa2(Empresa empresa)
+        {
+            var empresav = new EmpresaViewModel
+            {
+            RazonSocial = empresa.RazonSocial,
+            Nit = empresa.Nit,
+            Pais = empresa.Pais,
+            Departamento = empresa.Departamento,
+            Ciudad = empresa.Ciudad,
+            Direccion = empresa.Direccion,
+            Sector = empresa.Sector,
+            Descripcion = empresa.Descripcion,
+            NombreRepresentante = empresa.NombreRepresentante,
+            ApellidoRepresentante = empresa.ApellidoRepresentante,
+            CedulaRepresentante = empresa.CedulaRepresentante,
+            Estado = empresa.Estado,
+            Password = empresa.Password
+            };
+            return empresav; 
+        }
+
 
 
 

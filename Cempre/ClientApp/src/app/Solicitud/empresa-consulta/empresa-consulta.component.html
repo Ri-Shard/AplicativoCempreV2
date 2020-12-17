@@ -16,6 +16,7 @@
             <th scope="col">Sector</th>
             <th scope="col">Identificacion Representante</th>
             <th scope="col"> Estado</th>
+            <th scope="col"> Opciones</th>
           </tr>
         </thead>
         <tbody> 
@@ -31,9 +32,23 @@
             <td>{{empresa.sector}}</td>
             <td>{{empresa.cedulaRepresentante}}</td>
             <td>{{empresa.estado}}</td>
+            <td>
+              <button class="btn btn-info mr-1"
+               [routerLink]="['/empresaPerfil',empresa.nit]">
+               <i class="fa fa-pen"></i>
+             </button>
+            </td>
            </tr>
 
         </tbody>
       </table>
+
+      <div *ngIf="!cargando && empresas.length === 0"
+      class="alert alert-warning text-center mt-3 animated fadeIn faster">
+      <h4 class="alert-heading">No hay registros</h4>
+      <p>
+      <i class="fa fa-exclamation fa-2x"></i>
+      </p>
+      </div>
 
      

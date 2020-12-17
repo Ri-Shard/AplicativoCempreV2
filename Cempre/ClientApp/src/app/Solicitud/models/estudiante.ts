@@ -16,5 +16,9 @@ export class Estudiante {
     correo : string;
     estado : string;
     password:string;       
-
+    carrera:string;       
+    empresaID:string;       
+    fechaIngreso:number;       
+    primerInforme:number;       
+    ultimoInforme:number;       
 }

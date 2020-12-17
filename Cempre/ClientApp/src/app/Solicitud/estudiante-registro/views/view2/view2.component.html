@@ -21,7 +21,7 @@
                             </div>
                                             <div>
                         <div class="row cf">
-                        <label id="lbl1" for="semestre">Semestre:</label>
+                        <label id="semestrel" for="semestre">Semestre:</label>
                         <select id="semestre"name="semestre" formControlName="semestre"  class="form-control"  tabindex="17" [class.is-invalid]="semestreinvalido">
                             <option value="5">5</option> 
                             <option value="6" >6</option>
@@ -30,7 +30,74 @@
                             <option value="9">9  </option>
                             <option value="10" selected>10  </option>
                         </select><br>
-                        <div *ngIf="semestreinvalido" class="text-danger">Seleccione uno</div>   <br>  
+                        <div id="sem" *ngIf="semestreinvalido" class="text-danger">Seleccione uno</div>   <br>  
+
+                        <label id="lbl3" for="carrera">Carrera:</label>
+                        <select id="carrera"name="carrera" formControlName="carrera"  class="form-control"  tabindex="17" [class.is-invalid]="carrerainvalido">                          
+                      <option value="ADMINISTRACIÓN DE EMPRESAS 13976">ADMINISTRACIÓN DE EMPRESAS 13976</option> 
+                            <option value="Administración de Empresas Turísticas y Hoteleras 109532	
+                            " >Administración de Empresas Turísticas y Hoteleras 109532	
+                        </option>
+                            <option value="COMERCIO INTERNACIONAL 5244
+                            ">COMERCIO INTERNACIONAL 5244
+                        </option>
+                            <option value="CONTADURÍA PÚBLICA 1708
+                            ">CONTADURÍA PÚBLICA 1708
+                        </option>
+                            <option value="ECONOMÍA 7093
+                            ">ECONOMÍA 7093
+                        </option>
+                            <option value="DERECHO 7800
+                            " >DERECHO 7800
+                        </option>
+                            <option value="PSICOLOGÍA 102932
+                            " >PSICOLOGÍA 102932
+                        </option>
+                            <option value="SOCIOLOGÍA 9480
+                            " >SOCIOLOGÍA 9480
+                        </option>
+                            <option value="ENFERMERÍA 1706
+                            " >ENFERMERÍA 1706
+                        </option>
+                            <option value="INSTRUMENTACIÓN QUIRÚRGICA 6686
+                            " >INSTRUMENTACIÓN QUIRÚRGICA 6686
+                        </option>
+                            <option value="MICROBIOLOGÍA 8444
+                            " >MICROBIOLOGÍA 8444
+                        </option>
+                            <option value="INGENIERÍA AGROINDUSTRIAL 3237
+                            " >INGENIERÍA AGROINDUSTRIAL 3237
+                        </option>
+                            <option value="INGENIERÍA AMBIENTAL Y SANITARIA 7094
+                            " >INGENIERÍA AMBIENTAL Y SANITARIA 7094
+                        </option>
+                            <option value="INGENIERÍA DE SISTEMAS 5095
+                            " >INGENIERÍA DE SISTEMAS 5095
+                        </option>
+                            <option value="INGENIERÍA ELECTRÓNICA 7095
+                            " >INGENIERÍA ELECTRÓNICA 7095
+                        </option>
+                            <option value="LICENCIATURA EN MATEMÁTICAS 107036
+                            " >LICENCIATURA EN MATEMÁTICAS 107036
+                        </option>
+                            <option value="LICENCIATURA ESPAÑOL E INGLES 106693
+                            " >LICENCIATURA ESPAÑOL E INGLES 106693
+                        </option>
+                            <option value="LICENCIATURA EN LITERATURA Y LENGUA CASTELLANA 107334
+                            " >LICENCIATURA EN LITERATURA Y LENGUA CASTELLANA 107334
+                        </option>
+                            <option value="LICENCIATURA EN EDUCACIÓN FÍSICA, RECREACIÓN Y DEPORTES 106620
+                            " >LICENCIATURA EN EDUCACIÓN FÍSICA, RECREACIÓN Y DEPORTES 106620
+                        </option>
+                            <option value="LICENCIATURA EN CIENCIAS NATURALES Y EDUCACIÓN AMBIENTAL 11734
+                            " >LICENCIATURA EN CIENCIAS NATURALES Y EDUCACIÓN AMBIENTAL 11734
+                        </option>
+                            <option value="MÚSICA 106874
+                            " >MÚSICA 106874
+                        </option>
+
+                        </select><br>
+                        <div id="carr" *ngIf="carrerainvalido" class="text-danger">Seleccione uno</div>   <br>  
 
                         <div id="margintop">
                         <label id="lbl2" for="invOproyec">Ha realizado investigaciones y proyectos?</label>
@@ -62,11 +129,11 @@
                     </div>
 
                         <br><div id="centrob">                   
-                            <button type="submit" class="btn btn-primary" (click)="mostrar=true" [disabled]="!formGroup.valid">Registrar</button>                  
+                            <button type="submit" class="btn btn-primary" (click)="mostrarb=true" [disabled]="!formGroup.valid">Registrar</button>                  
                            </div>
                     </div>
 
-                    <div *ngIf="mostrar" class="col-sm-4 text-right" style="max-width:100% ">
+                    <div *ngIf="mostrarb" class="col-sm-4 text-right" style="max-width:100% ">
                         <button class="btn btn-danger "  [routerLink]="['/estudiantePerfil',estudiante.identificacion]">Revisar Perfil</button>
                     </div>
                     </fieldset>
@@ -75,3 +142,4 @@
         </div>
     </body>
 </html>
+

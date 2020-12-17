@@ -32,8 +32,7 @@ namespace Cempre.Controllers
             var estudiantes = _estudianteService.ConsultarTodos().Select(p=> new EstudianteViewModel(p));
             return estudiantes;
         }
-
-        [HttpGet("{id}")]
+    [HttpGet("{id}")]
         public EstudianteViewModel GetEstudiante(string id)
         {
             
@@ -51,13 +50,29 @@ namespace Cempre.Controllers
             var response = _estudianteService.Guardar(estudiante);
             if (response.Error) 
             {
-                ModelState.AddModelError("Guardar Empresa", response.Mensaje);
+                ModelState.AddModelError("Guardar Estudiante", response.Mensaje);
                 var problemDetails = new ValidationProblemDetails(ModelState)
                 {
                     Status = StatusCodes.Status400BadRequest,
                 };
                 return BadRequest(problemDetails);                  }
             return Ok(response.Estudiante);
+        }
+                // PUT: api/Restaurante/5
+        [HttpPut("{id}")]
+        public ActionResult<EstudianteViewModel> Put(string id, EstudianteInputModel estudianteInput)
+        {
+            Estudiante estudiante = MapearEstudiante(estudianteInput);
+            var ide = _estudianteService.BuscarEstudiante(id);
+            if (ide == null)
+            {
+                return BadRequest("No encontrado");
+            }
+            else
+            {
+                string respuesta = _estudianteService.Modificar(estudiante);
+               return Ok(respuesta);
+            }
         }
 
           private Estudiante MapearEstudiante(EstudianteInputModel estudianteInput)
@@ -81,10 +96,15 @@ namespace Cempre.Controllers
             Correo = estudianteInput.Correo,
             Estado = estudianteInput.Estado,
             Password = estudianteInput.Password,
+            EmpresaID = estudianteInput.EmpresaID,
+            Carrera = estudianteInput.Carrera,
+            FechaIngreso = estudianteInput.FechaIngreso,
+            PrimerInforme = estudianteInput.PrimerInforme,
+            UltimoInforme = estudianteInput.UltimoInforme,
             };
             return estudiante; 
         }
-                  private EstudianteViewModel MapearEstudiante2(Estudiante estudiante)
+            private EstudianteViewModel MapearEstudiante2(Estudiante estudiante)
         {
             var estudiantev = new EstudianteViewModel
             {
@@ -105,11 +125,22 @@ namespace Cempre.Controllers
             Correo = estudiante.Correo,
             Estado = estudiante.Estado,
             Password = estudiante.Password,
+            Carrera = estudiante.Carrera,
+            EmpresaID = estudiante.EmpresaID,
+            FechaIngreso = estudiante.FechaIngreso,
+            PrimerInforme = estudiante.PrimerInforme,
+            UltimoInforme = estudiante.UltimoInforme,
             };
             return estudiantev; 
         }
 
 
-
+        // DELETE: api/Persona/5
+        [HttpDelete("{id}")]
+        public ActionResult<string> Delete(string id)
+        {
+            string mensaje = _estudianteService.Eliminar(id);
+            return Ok(mensaje);
+        }
     }
 }

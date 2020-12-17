@@ -39,11 +39,24 @@ const httpOptions = {
               catchError(this.handleErrorService.handleError<Estudiante>('Registrar estudiante', null))
           );
   }
-    getId(id: string): Observable<Estudiante> {
-      const url = `${this.baseUrl + 'api/Estudiante'}/${id}`;
-      return this.http.get<Estudiante>(url, httpOptions)
+      getId(id: string): Observable<Estudiante> {
+        const url = `${this.baseUrl + 'api/Estudiante'}/${id}`;
+        return this.http.get<Estudiante>(url, httpOptions)
 
-    }
+      }
+      getIdE(nit: string): Observable<Estudiante[]> {       
+        const url = `${this.baseUrl + 'api/Solicitud'}/${nit}`;
+        return this.http.get<Estudiante[]>(url,httpOptions)
+      }
+      
+  put(estudiante: Estudiante): Observable<any> {
+    const url = `${this.baseUrl}api/Estudiante/${estudiante.identificacion}`;
+    return this.http.put(url, estudiante, httpOptions)
+      .pipe(
+        tap(_ => this.handleErrorService.log('Pago Realizado')),
+        catchError(this.handleErrorService.handleError<any>('Editar Restaurante'))
+      );
+  }
   
   }
   

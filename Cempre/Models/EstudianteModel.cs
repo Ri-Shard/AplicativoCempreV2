@@ -37,6 +37,13 @@ namespace Cempre.Models {
         public string Estado { get; set; }
         [Required(ErrorMessage = "La contraseña es Requerida")]
         public string Password { get; set; }
+        [Required(ErrorMessage = "La Carrera es Requerida")]
+        public string Carrera { get; set; }
+        public string EmpresaID { get; set; }
+        public decimal FechaIngreso { get; set; }
+        public decimal PrimerInforme { get; set; }
+        public decimal UltimoInforme { get; set; }
+        
 
     }
 
@@ -62,6 +69,11 @@ namespace Cempre.Models {
             Correo = estudiante.Correo;
             Estado = estudiante.Estado;
             Password = estudiante.Password;
+            Carrera = estudiante.Carrera;
+            FechaIngreso = estudiante.FechaIngreso;
+            PrimerInforme = estudiante.PrimerInforme;
+            UltimoInforme = estudiante.UltimoInforme;
+            EmpresaID = estudiante.EmpresaID;
 
         }
     }

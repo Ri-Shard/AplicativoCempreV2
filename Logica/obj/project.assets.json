@@ -7205,16 +7205,19 @@
       "outputPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Logica\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rikar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\rikar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "projectReferences": {
             "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj": {
               "projectPath": "C:\\Users\\rikar\\Desktop\\Angular\\AplicativoCempre\\Datos\\Datos.csproj"
@@ -7233,6 +7236,7 @@
     },
     "frameworks": {
       "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
         "imports": [
           "net461",
           "net462",
@@ -7248,7 +7252,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

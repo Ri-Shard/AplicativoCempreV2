@@ -121,11 +121,44 @@
     position: absolute;
     left:50px;
 }
+#sem{
+    position: absolute;
+    left:370px;
+}
 #lbl2{
     position: absolute;
     left:50px;
 }
-#sexo,#estadoCivil,#semestre{
+#lbl3{
+    position: absolute;
+    left:50px;
+    bottom:360px;
+}
+#carrera{
+    position: absolute;
+    left:200px;
+    width : 150px;
+    bottom:350px;
+}
+#carr{
+    position: absolute;
+    left:350px;
+    width : 150px;
+    bottom:370px;
+}
+#semestre{
+    position: absolute;
+    left:200px;
+    width : 150px;
+    bottom:400px;
+}
+#semestrel{
+    position: absolute;
+    left:17px;
+    width : 150px;
+    bottom:400px;
+}
+#sexo,#estadoCivil{
     position: absolute;
     left:200px;
     width : 150px;

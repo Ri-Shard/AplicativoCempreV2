@@ -25,6 +25,9 @@ import { Rview1Component } from './Solicitud/estudiante-registro/views/view1/vie
 import { Rview2Component } from './Solicitud/estudiante-registro/views/view2/view2.component';
 import { LoginComponent } from './Login/login/login.component';
 import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
+import { PagoComponent } from './Solicitud/perfil/pago/pago.component';
+import { FiltroxEmpresasPipe } from './pipe/filtrox-empresas.pipe';
+import { FiltroxEstadoPipe } from './pipe/filtrox-estado.pipe';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
     View3Component,
     Rview1Component,
     Rview2Component,
-    AlertModalComponent
+    AlertModalComponent,
+    PagoComponent,
+    FiltroxEmpresasPipe,
+    FiltroxEstadoPipe
   ],
   imports: [
     ReactiveFormsModule,

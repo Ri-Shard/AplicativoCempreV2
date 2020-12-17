@@ -36,6 +36,7 @@ CREATE TABLE [dbo].[Estudiante](
 [Semestre] [nvarchar] (2) NULL,
 [Correo] [nvarchar](30) NULL,
 [Password][nvarchar](15) NULL,
+[Carrera][nvarchar](50) NULL,
 ) 
 GO
 

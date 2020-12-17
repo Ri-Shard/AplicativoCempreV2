@@ -10,6 +10,7 @@ import { Empresa } from 'src/app/Solicitud/models/empresa';
 export class View2Component implements OnInit {
     formGroup: FormGroup;
     empresa: Empresa;
+    empresasa: Empresa;
      constructor(private _empresaService: EmpresaService, private formBuilder: FormBuilder) {}
   
     ngOnInit() {
@@ -24,21 +25,26 @@ export class View2Component implements OnInit {
         control.markAllAsTouched();
       });
       }
-      console.warn(this.formGroup.value);
       this.add();
       }
       add() {
-        this.empresa = JSON.parse(localStorage.getItem('descripcion'));
-        this.empresa.nombreRepresentante = this.formGroup.value.nombreRepresentante;
-        this.empresa.apellidoRepresentante = this.formGroup.value.apellidoRepresentante;
-        this.empresa.cedulaRepresentante = this.formGroup.value.cedulaRepresentante;
-        this.empresa.password = this.formGroup.value.password;
+        this.empresa = this.formGroup.value;
+        this.empresasa = JSON.parse(localStorage.getItem('descripcion'));
+
+        this.empresa.ciudad = this.empresasa.ciudad;
+        this.empresa.departamento = this.empresasa.departamento;
+        this.empresa.descripcion = this.empresasa.descripcion;
+        this.empresa.direccion = this.empresasa.direccion;
+        this.empresa.nit = this.empresasa.nit;
+        this.empresa.pais = this.empresasa.pais;
+        this.empresa.razonSocial = this.empresasa.razonSocial;
+        this.empresa.sector = this.empresasa.sector;
+
         console.warn(this.empresa);
         this._empresaService.post(this.empresa).subscribe(p => {
           if (p != null) {
             this.empresa = p;
           } else {
-             alert('ERROR REVISE LOS CAMPOS!');
           }
         });
       }
@@ -48,7 +54,7 @@ export class View2Component implements OnInit {
           apellidoRepresentante: ['', Validators.required],
           cedulaRepresentante: ['', Validators.required],  
           password: ['', Validators.required],
-          estado:['Solicitando']  
+          estado:['Solicitando']
         }); 
         }
       get nombreRinvalido() {

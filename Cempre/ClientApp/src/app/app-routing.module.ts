@@ -15,6 +15,7 @@ import { View3Component } from './Solicitud/empresa-registro/views/view3/view3.c
 import { Rview1Component } from './Solicitud/estudiante-registro/views/view1/view1.component';
 import { Rview2Component } from './Solicitud/estudiante-registro/views/view2/view2.component';
 import { LoginComponent } from './Login/login/login.component';
+import { PagoComponent } from './Solicitud/perfil/pago/pago.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
   path: 'empresaConsulta',
   component:EmpresaConsultaComponent
+  },
+  {
+  path: 'estudianteConsulta/:estado',
+  component:EstudianteConsultaComponent
   },
   { path: 'empresaRegistro',
   component:EmpresaRegistroComponent
@@ -44,6 +49,11 @@ const routes: Routes = [
       path: 'estudiantePerfil/:id',
       component:EstudiantePerfilComponent
     },
+  {
+      path: 'pago/:id',
+      component:PagoComponent
+    },
+
     {
         path: 'loginRegistro',
         component:RegisterComponent

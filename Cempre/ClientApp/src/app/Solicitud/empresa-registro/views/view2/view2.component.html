@@ -36,8 +36,11 @@
             <div id="ciudadNacimientod" *ngIf="passwordinvalido" class="text-danger">Se requiere la Contraseña Para futuros ingresos</div>
         
             <br><div id="centrob">                   
-              <button type="submit" class="btn btn-primary" [disabled]="!formGroup.valid">Registrar</button>                  
+              <button type="submit" class="btn btn-primary" (click)="mostrarb=true" [disabled]="!formGroup.valid">Registrar</button>                  
              </div>
+             <div *ngIf="mostrarb" class="col-sm-4 text-right" style="max-width:100% ">
+              <button class="btn btn-danger "  [routerLink]="['/empresaPerfil',empresa.nit]">Revisar Perfil</button>
+          </div>
           </fieldset>    
 
         </div>

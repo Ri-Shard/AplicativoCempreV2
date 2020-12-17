@@ -27,16 +27,18 @@ export class Rview2Component implements OnInit {
    mostrar2= false;
    mostrar3= false;
    mostrar4= false;
+   mostrarb= false;
 
   buildForm() {
     this.formGroup = this.formBuilder.group({
        semestre: ['', Validators.required],
+       carrera: ['', Validators.required],
        invOproyec: ['',],
        conocimientoyprac: ['',],
        seminarios: ['',],
        distinciones: ['',], 
       password: ['',Validators.required], 
-      estado: ['Esperando Pago'] 
+      estado: ['Esperando Pago'] ,
     }); 
     }
 
@@ -96,6 +98,9 @@ export class Rview2Component implements OnInit {
     }
     get passwordinvalido() {
       return this.formGroup.get('password').invalid && this.formGroup.get('password').touched;
+    }
+    get carrerainvalido() {
+      return this.formGroup.get('carrera').invalid && this.formGroup.get('carrera').touched;
     }
 
 }

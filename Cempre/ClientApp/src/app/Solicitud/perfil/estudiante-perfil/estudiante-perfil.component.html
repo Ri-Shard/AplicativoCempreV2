@@ -3,8 +3,11 @@
 		<div class="col-md-3">
 			<div class="profile-sidebar">
 				<!-- SIDEBAR USERPIC -->
-				<div class="profile-userpic">
-					<img src="https://gravatar.com/avatar/31b64e4876d603ce78e04102c67d6144?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" class="img-responsive" alt="">
+				<div id="mp" style = "display: none;" class="profile-userpic">
+					<img src="assets/img/userM.png">
+				</div>
+				<div id="fp" style = "display: none;"	 class="profile-userpic">
+					<img src="assets/img/userF.png">
 				</div>
 				<!-- END SIDEBAR USERPIC -->
 				<!-- SIDEBAR USER TITLE -->
@@ -12,78 +15,38 @@
 					<div class="profile-usertitle-name">
 					<h5>
 					{{estudiante.nombres}}	
+					{{estudiante.apellido}}	
 					</h5>
 					</div>
 					<div class="profile-usertitle-job">
-						Developer
+						Estudiante
+					</div>
+					<div class="profile-usertitle-job">
+						{{estudiante.carrera}}
 					</div>
 				</div>
-				<!-- END SIDEBAR USER TITLE -->
+				<!-- END SIDEBAR USER TITLE --> 
 				<!-- SIDEBAR BUTTONS -->
 				<div class="profile-userbuttons">
-					<button *ngIf="mostrar"  type="button" class="btn btn-success btn-sm">Realizar Pago</button>
+					<button  type="button" class="btn btn-success btn-sm"  (click)="add()">Agregar a la Empresa</button>
 					<button type="button" class="btn btn-danger btn-sm">Adjuntar Archivos</button>
 				</div>
 				<!-- END SIDEBAR BUTTONS -->
-				<!-- SIDEBAR MENU -->
-				<div class="profile-usermenu">
-					<ul class="nav">
-						<li class="active">
-							<a href="#">
-							<i class="glyphicon glyphicon-home"></i>
-							Overview </a>
-						</li>
-						<li>
-							<a href="https://codepen.io/jasondavis/pen/jVRwaG?editors=1000">
-							<i class="glyphicon glyphicon-user"></i>
-							Account Settings </a>
-						</li>
-						<li>
-							<a href="#" target="_blank">
-							<i class="glyphicon glyphicon-ok"></i>
-							Tasks </a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="glyphicon glyphicon-flag"></i>
-							Help </a>
-						</li>
-					</ul>
-				</div>
-				<!-- END MENU -->
 			   
            <div class="portlet light bordered">
-                                                <!-- STAT -->
-                                                <div class="row list-separated profile-stat">
-                                                    <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <div class="uppercase profile-stat-title"> 37 </div>
-                                                        <div class="uppercase profile-stat-text"> Projects </div>
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <div class="uppercase profile-stat-title"> 51 </div>
-                                                        <div class="uppercase profile-stat-text"> Tasks </div>
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-4 col-xs-6">
-                                                        <div class="uppercase profile-stat-title"> 61 </div>
-                                                        <div class="uppercase profile-stat-text"> Uploads </div>
-                                                    </div>
-                                                </div>
-                                                <!-- END STAT -->
-                                                 <div>
-                                                    <h4 class="profile-desc-title">About Jason Davis</h4>
-                                                    <span class="profile-desc-text"> Lorem ipsum dolor sit amet diam nonummy nibh dolore. </span>
-                                                    <div class="margin-top-20 profile-desc-link">
-                                                        <i class="fa fa-globe"></i>
-                                                        <a href="https://www.apollowebstudio.com">apollowebstudio.com</a>
-                                                    </div>
-                                                    <div class="margin-top-20 profile-desc-link">
-                                                        <i class="fa fa-twitter"></i>
-                                                        <a href="https://www.twitter.com/jasondavisfl/">@jasondavisfl</a>
-                                                    </div>
-                                                    <div class="margin-top-20 profile-desc-link">
-                                                        <i class="fa fa-facebook"></i>
-                                                        <a href="https://www.facebook.com/">JasonDavisFL</a>
- </div></div></div>                   
+				<!-- STAT -->
+				<div class="row list-separated profile-stat">
+					<div class="col-md-4 col-sm-4 col-xs-6">
+						<div class="uppercase profile-stat-title"> {{estudiante.invOproyec}} </div>
+						<div class="uppercase profile-stat-text"> {{estudiante.conocimientoyprac}} </div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6">
+						<div class="uppercase profile-stat-title"> {{estudiante.seminarios}} </div>
+						<div class="uppercase profile-stat-text"> {{estudiante.distinciones}} </div>
+					</div>
+				</div>
+				<!-- END STAT -->
+			</div>                   
                                            
         
         
@@ -91,8 +54,183 @@
 		</div>
 		<div class="col-md-9">
             <div class="profile-content">
-			   Some user related content goes here...
-            </div>
+				<div id="calendar-wrap">
+					<header>
+						<h5>
+							{{currentDate()}}	
+						</h5>
+											</header>
+					<div id="calendar">
+						<ul class="weekdays">
+							<li>Domingo</li>
+							<li>Lunes</li>
+							<li>Martes</li>
+							<li>Miercoles</li>
+							<li>Jueves</li>
+							<li>Viernes</li>
+							<li>Sabado</li>
+						</ul>
+		
+						<!-- Days from previous month -->
+		
+						<ul class="days">
+							<li class="day other-month">
+								<div class="date">27</div>    					
+							</li>
+							<li class="day other-month">
+								<div class="date">28</div>    					
+							</li>
+							<li class="day other-month">
+								<div class="date">29</div>    					
+							</li>
+							<li class="day other-month">
+								<div class="date">30</div>    					
+							</li>
+							<li class="day other-month">
+								<div class="date">31</div>    					
+							</li>
+		
+							<!-- Days in current month -->
+		
+							<li class="day">
+								<div class="date">1</div>    					
+							</li>
+							<li class="day">
+								<div class="date">2</div>     					
+							</li>
+						</ul>
+		
+							<!-- Row #2 -->
+		
+						<ul class="days">
+							<li class="day">
+								<div class="date">3</div>    					
+							</li>
+							<li class="day">
+								<div class="date">4</div>    					
+							</li>
+							<li class="day">
+								<div class="date">5</div>    					
+							</li>
+							<li class="day">
+								<div class="date">6</div>    					
+							</li>
+							<li class="day">
+								<div class="date">7</div>
+							</li>
+							<li class="day">
+								<div class="date">8</div>    					
+							</li>
+							<li class="day">
+								<div class="date">9</div>    					
+							</li>
+						</ul>
+		
+							<!-- Row #3 -->
+		
+						<ul class="days">
+							<li class="day">
+								<div class="date">10</div>    					
+							</li>
+							<li class="day">
+								<div class="date">11</div>    					
+							</li>
+							<li class="day">
+								<div class="date">12</div>    					
+							</li>
+							<li class="day">
+								<div class="date">13</div>    					
+							</li>
+							<li class="day">    					
+							</li>
+							<li class="day">
+								<div class="date">15</div>    					
+							</li>
+							<li class="day">
+								<div class="date">16</div>    					
+							</li>
+						</ul>
+		
+							<!-- Row #4 -->
+		
+						<ul class="days">
+							<li class="day">
+								<div class="date">17</div>    					
+							</li>
+							<li class="day">
+								<div class="date">18</div>    					
+							</li>
+							<li class="day">
+								<div class="date">19</div>    					
+							</li>
+							<li class="day">
+								<div class="date">20</div>    					
+							</li>
+							<li class="day">
+								<div class="date">21</div>    					
+							</li>
+							<li class="day">
+								<div class="date">22</div>   					
+							</li>
+							<li class="day">
+								<div class="date">23</div>    					
+							</li>
+						</ul>
+		
+								<!-- Row #5 -->
+		
+						<ul class="days">
+							<li class="day">
+								<div class="date">24</div>    					
+							</li>
+							<li class="day">
+								<div class="date">25</div>    					
+							</li>
+							<li class="day">
+								<div class="date">26</div>    					
+							</li>
+							<li class="day">
+								<div class="date">27</div>    					
+							</li>
+							<li class="day">
+								<div class="date">28</div>    					
+							</li>
+							<li class="day">
+								<div class="date">29</div>    					
+							</li>
+							<li class="day">
+								<div class="date">30</div>    					
+							</li>
+						</ul>
+		
+						<!-- Row #6 -->
+		
+						<ul class="days">
+							<li class="day">
+								<div class="date">31</div>    					
+							</li>
+							<li class="day other-month">
+								<div class="date">1</div> <!-- Next Month -->    					
+							</li>
+							<li class="day other-month">
+								<div class="date">2</div>    					
+							</li>
+							<li class="day other-month">
+								<div class="date">3</div>    					
+							</li>
+							<li class="day other-month">
+								<div class="date">4</div>    					
+							</li>
+							<li class="day other-month">
+								<div class="date">5</div>    					
+							</li>
+							<li class="day other-month">
+								<div class="date">6</div>    					
+							</li>
+						</ul>
+		
+					</div><!-- /. calendar -->
+				</div><!-- /. wrap -->            </div>
 		</div>
 	</div>
 </div>

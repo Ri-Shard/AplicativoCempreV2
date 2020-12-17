@@ -29,7 +29,6 @@ const httpOptionsPut = {
   
     get(): Observable<Empresa[]> {
       return this.http.get<Empresa[]>(this.baseUrl + 'api/Empresa')
-
     }
   
     post(empresa: Empresa): Observable<Empresa> {
@@ -38,16 +37,10 @@ const httpOptionsPut = {
               tap(_ => this.handleErrorService.log('Registro Realizado satisfactoriamente')),
               catchError(this.handleErrorService.handleError<Empresa>('Registrar empresa', null))
           );
-  
-  }
-
-    /** PUT: update  on the server */
-    put(empresa: Empresa): Observable<any> {
-        const url = `${this.baseUrl}api/Empresa/${empresa.nit}`;
-        return this.http.put(url, empresa, httpOptions)
-          .pipe(
-            tap(_ => this.handleErrorService.log('datos enviados')),
-            catchError(this.handleErrorService.handleError<any>('Editar Empresa'))
-          );
       }
+      getId(nit: string): Observable<Empresa> {
+        const url = `${this.baseUrl + 'api/Empresa'}/${nit}`;
+        return this.http.get<Empresa>(url, httpOptions)
+      }
+
     }
